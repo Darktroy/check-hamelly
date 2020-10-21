@@ -1,0 +1,13 @@
+        "davibennun/laravel-push-notification": "dev-laravel5",
+        "florianv/laravel-swap": "^2.0",
+        "zizaco/entrust": "dev-master"
+        "brozot/laravel-fcm": "^1.2",
+        - account kit is deprecated, search for alternative.
+    //Manage Location Based Price routes
+    // Route::group(['middleware' =>  'admin_can:manage_location_based_fare'], function() {
+    //     Route::get('location_based_fare', 'Admin\LocationBasedFareController@index');
+    //     Route::match(array('GET', 'POST'),'add_location_based_fare', 'Admin\LocationBasedFareController@add');
+    //     Route::match(array('GET', 'POST'),'edit_location_based_fare/{id}', 'Admin\LocationBasedFareController@update');
+    //     Route::match(array('GET', 'POST'),'delete_location_based_fare/{id}', 'Admin\LocationBasedFareController@delete');
+
+    // });

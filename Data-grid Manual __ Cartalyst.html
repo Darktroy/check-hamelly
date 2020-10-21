@@ -1,0 +1,2132 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://cartalyst.com/manual/data-grid/5.x -->
+<html class="js wf-fftisawebpro-n7-active wf-ubuntu-n7-active wf-sourcecodepro-n4-active wf-fftisawebpro-n4-active wf-fftisawebpro-i4-active wf-ubuntu-n3-active wf-ubuntu-n4-active wf-sourcecodepro-n3-active wf-sourcecodepro-n7-active wf-fftisawebpro-i7-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>
+		Data-grid Manual ::
+		Cartalyst
+		
+	</title>
+	<meta name="description" content="">
+	<meta name="base_url" content="https://cartalyst.com">
+
+		
+	
+
+	
+	
+	
+	
+
+			<link href="./Data-grid Manual __ Cartalyst_files/frontend.v5.styles.064b835eb6b645e998115f137c3a4bd4_1484860603.css" rel="stylesheet">
+	
+			
+	<script type="text/javascript" async="" src="./Data-grid Manual __ Cartalyst_files/ga.js"></script><script type="text/javascript" src="./Data-grid Manual __ Cartalyst_files/stx4xdg.js"></script>
+	<style type="text/css">.tk-ff-tisa-web-pro{font-family:"ff-tisa-web-pro",serif;}.tk-ubuntu{font-family:"ubuntu",sans-serif;}.tk-source-code-pro{font-family:"source-code-pro",sans-serif;}</style><style type="text/css">@font-face{font-family:ff-tisa-web-pro;src:url(https://use.typekit.net/af/3466a5/00000000000000000001197e/21/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/3466a5/00000000000000000001197e/21/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/3466a5/00000000000000000001197e/21/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:ff-tisa-web-pro;src:url(https://use.typekit.net/af/263d07/00000000000000000001197f/21/l?subset_id=2&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/263d07/00000000000000000001197f/21/d?subset_id=2&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/263d07/00000000000000000001197f/21/a?subset_id=2&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;}@font-face{font-family:ff-tisa-web-pro;src:url(https://use.typekit.net/af/f44c54/00000000000000000001197b/21/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/f44c54/00000000000000000001197b/21/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/f44c54/00000000000000000001197b/21/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}@font-face{font-family:ff-tisa-web-pro;src:url(https://use.typekit.net/af/cdfb57/00000000000000000001197a/21/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/cdfb57/00000000000000000001197a/21/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/cdfb57/00000000000000000001197a/21/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:ubuntu;src:url(https://use.typekit.net/af/999063/0000000000000000000123f0/21/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/999063/0000000000000000000123f0/21/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/999063/0000000000000000000123f0/21/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:ubuntu;src:url(https://use.typekit.net/af/e4a757/0000000000000000000123e9/21/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/e4a757/0000000000000000000123e9/21/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/e4a757/0000000000000000000123e9/21/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:ubuntu;src:url(https://use.typekit.net/af/73b3b1/0000000000000000000123ec/21/l?subset_id=2&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/73b3b1/0000000000000000000123ec/21/d?subset_id=2&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/73b3b1/0000000000000000000123ec/21/a?subset_id=2&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;}@font-face{font-family:source-code-pro;src:url(https://use.typekit.net/af/f65417/000000000000000000013299/21/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/f65417/000000000000000000013299/21/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/f65417/000000000000000000013299/21/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:source-code-pro;src:url(https://use.typekit.net/af/9f839d/000000000000000000013296/21/l?subset_id=2&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/9f839d/000000000000000000013296/21/d?subset_id=2&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/9f839d/000000000000000000013296/21/a?subset_id=2&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;}@font-face{font-family:source-code-pro;src:url(https://use.typekit.net/af/4bd05c/000000000000000000013297/21/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/4bd05c/000000000000000000013297/21/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/4bd05c/000000000000000000013297/21/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}</style><script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+	<link rel="shortcut icon" href="https://cartalyst.com/themes/frontend/v5/assets/img/favicon.png">
+
+</head>
+<body class="docs">
+
+	<div class="virtus">
+		<div class="flux flux--1"></div>
+		<div class="flux flux--2"></div>
+		<div class="flux flux--3"></div>
+		<div class="flux flux--4"></div>
+		<div class="flux flux--5"></div>
+	</div>
+
+	<input id="toggle-center" name="toggle" type="radio" checked="">
+	<input id="toggle-right" name="toggle" type="radio">
+
+	<a href="https://cartalyst.com/" class="brand brand--docs">
+		Cartalyst LLC.
+	</a>
+
+	<nav class="navigate navigate--toc ps-container">
+		
+<div id="toc" class="tocify"><ul id="tocify-header0" class="tocify-header nav nav-list"><li class="tocify-item active" data-unique="introduction"><a>Introduction</a></li></ul><ul id="tocify-header1" class="tocify-header nav nav-list"><li class="tocify-item" data-unique="philosophy"><a>Philosophy</a></li></ul><ul id="tocify-header2" class="tocify-header nav nav-list"><li class="tocify-item" data-unique="features"><a>Features</a></li><ul class="tocify-subheader nav nav-list" data-tag="3"><li class="tocify-item" data-unique="back-end"><a>Back end</a></li><li class="tocify-item" data-unique="front-end"><a>Front end</a></li><li class="tocify-item" data-unique="quick-example"><a>Quick Example</a></li></ul></ul><ul id="tocify-header3" class="tocify-header nav nav-list"><li class="tocify-item" data-unique="setup"><a>Setup</a></li><ul class="tocify-subheader nav nav-list" data-tag="3"><li class="tocify-item" data-unique="installation"><a>Installation</a></li></ul></ul><ul id="tocify-header4" class="tocify-header nav nav-list"><li class="tocify-item" data-unique="usage"><a>Usage</a></li><ul class="tocify-subheader nav nav-list" data-tag="3"><li class="tocify-item" data-unique="creating-a-data-grid-object"><a>Creating a Data Grid Object</a></li><li class="tocify-item" data-unique="settings"><a>Settings</a></li></ul></ul><ul id="tocify-header5" class="tocify-header nav nav-list"><li class="tocify-item" data-unique="concepts"><a>Concepts</a></li><ul class="tocify-subheader nav nav-list" data-tag="3"><li class="tocify-item" data-unique="provider"><a>Provider</a></li><li class="tocify-item" data-unique="handler"><a>Handler</a></li><li class="tocify-item" data-unique="parameters"><a>Parameters</a></li></ul></ul><ul id="tocify-header6" class="tocify-header nav nav-list"><li class="tocify-item" data-unique="result-sets"><a>Result Sets</a></li><ul class="tocify-subheader nav nav-list" data-tag="3"><li class="tocify-item" data-unique="generating-results"><a>Generating Results</a></li><li class="tocify-item" data-unique="sorting-results"><a>Sorting Results</a></li><li class="tocify-item" data-unique="switching-pages"><a>Switching Pages</a></li><li class="tocify-item" data-unique="filter-results"><a>Filter Results</a></li><li class="tocify-item" data-unique="paginating-results"><a>Paginating Results</a></li></ul></ul><ul id="tocify-header7" class="tocify-header nav nav-list"><li class="tocify-item" data-unique="javascript-plugin"><a>Javascript Plugin</a></li><ul class="tocify-subheader nav nav-list" data-tag="3"><li class="tocify-item" data-unique="introduction22"><a>Introduction</a></li><li class="tocify-item" data-unique="filters"><a>Filters</a></li><li class="tocify-item" data-unique="filter-types"><a>Filter types</a></li><li class="tocify-item" data-unique="filter-presets"><a>Filter presets</a></li><li class="tocify-item" data-unique="reset"><a>Reset</a></li><li class="tocify-item" data-unique="sorts"><a>Sorts</a></li><li class="tocify-item" data-unique="labels"><a>Labels</a></li><li class="tocify-item" data-unique="options"><a>Options</a></li><li class="tocify-item" data-unique="events"><a>Events</a></li><li class="tocify-item" data-unique="extending"><a>Extending</a></li></ul></ul><ul id="tocify-header8" class="tocify-header nav nav-list"><li class="tocify-item" data-unique="integration"><a>Integration</a></li><ul class="tocify-subheader nav nav-list" data-tag="3"><li class="tocify-item" data-unique="laravel-6"><a>Laravel 6</a></li><li class="tocify-item" data-unique="export"><a>Export</a></li></ul></ul></div>
+
+	<div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px; width: 240px; display: none;"><div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px; height: 443px; display: none;"><div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div></div></nav>
+
+	<div class="base base--docs">
+		<div class="page page--docs">
+			<div class="page__left page__left--docs"></div>
+			<div class="page__center page__center--docs">
+
+				<nav class="navigate navigate--versions"><ul><li><a class="active" href="https://cartalyst.com/manual/data-grid">5.x</a></li><li><a href="https://cartalyst.com/manual/data-grid/4.0">4.0</a></li><li><a href="https://cartalyst.com/manual/data-grid/3.0">3.0</a></li><li><a href="https://cartalyst.com/manual/data-grid/2.0">2.0</a></li><li><a href="https://cartalyst.com/manual/data-grid/1.1">1.1</a></li></ul></nav>
+
+								<div class="subscriber subscriber--logged-out">
+					<nav class="navigate navigate--documentation">
+						<ul>
+														<li><a target="_blank" href="http://demo.cartalyst.com/data-grid" class="button button--theme"><i class="fa fa-rocket"></i> Demo</a></li>
+														<li><a href="https://cartalyst.com/pricing" class="button button--theme"><i class="fa fa-heart"></i> Subscribe</a></li>
+														<li><a href="https://cartalyst.com/login" class="button button--theme"><i class="fa fa-sign-in"></i> Login</a></li>
+													</ul>
+					</nav>
+				</div>
+				
+				<nav class="navigate navigate--sidebar">
+					<label class="toggle-center" for="toggle-center" onclick=""><i class="fa fa-indent"></i></label>
+					<label class="toggle-right" for="toggle-right" onclick=""><i class="fa fa-outdent"></i></label>
+				</nav>
+
+				<div class="documentation">
+
+					<header class="documentation__header">
+
+						<div class="title" data-package="data-grid">Data-grid <span>by Cartalyst</span></div>
+
+						<div class="statistics clearfix">
+							<div class="statistic statistic--opened tip" data-tip="Open issues">3</div>
+							<div class="statistic statistic--closed tip" data-tip="Closed issues">114</div>
+							<div class="statistic statistic--commits tip" data-tip="Commits">16</div>
+							<div class="statistic statistic--forks tip" data-tip="Forks">0</div>
+							<div class="statistic statistic--stargazers tip" data-tip="Stargazers">1</div>
+						</div>
+
+												<div class="private clearfix">
+							<p><i class="fa fa-exclamation-circle fa-lg"></i> This package requires a valid subscription. <a class="link" href="https://cartalyst.com/pricing" target="_blank">Subscribe for access.</a> </p>
+						</div>
+						
+					</header>
+
+					<section class="section">
+
+	<article class="article article--left">
+
+		<div class="article__block">
+
+			<div class="documentation__content">
+				<div name="introduction" data-unique="introduction"></div><h2>Introduction</h2>
+
+<p>DataGrid is a framework agnostic data grid package that makes it fantastically easy to handle large data sources. It shifts the focus from pagination to data filtration. Pass any data source through a data handler and the package will take care of the rest so you can use the filtered result set to create your applications.</p>
+
+<p>The package requires PHP 7.2+ and follows the FIG standards PSR-1, PSR-2, and PSR-4 to ensure a high level of interoperability between shared PHP code and is fully unit-tested.</p>
+
+<div name="philosophy" data-unique="philosophy"></div><h2>Philosophy</h2>
+
+<p>We wanted to create a package that would not only simplify front end side of presenting a data set, but make it easy to handle any data set in general.</p>
+
+<p>No matter what is the use case, data-grid's goal is to help you manage and manipulate your data set.</p>
+
+<p>We completely rewrote data-grid to be very flexible and extendable for a wide range of use cases, from creating a full-fledged facets enabled e-commerce catalog to internal use of data-grid for your backend.</p>
+
+<p>Have a <a href="https://cartalyst.com/manual/data-grid/5.x#installation">read through the Installation Guide</a> and on how to integrate it with other frameworks using our <a href="https://cartalyst.com/manual/data-grid/5.x#implementations">implementation and bridge packages</a>.</p><div name="features" data-unique="features"></div><h2>Features</h2>
+
+<p>Data-grid comes with the following built-in features:</p>
+
+<div name="back-end" data-unique="back-end"></div><h3>Back end</h3>
+
+<ul>
+<li><strong>Filtration</strong>. Data-grid supports various filters, operators and regex match.</li>
+<li><strong>Sorting</strong>. You can sort your data by multiple sort criteria.</li>
+<li><strong>Pagination</strong>. You can easily paginate your data, and additionally set up one of built-in pagination methods - such as <code>infinite</code>, <code>single</code>, or <code>grouped</code>.</li>
+<li><strong>Hydrator</strong>. No matter what is your data source, data-grid can hydrate resulting data-set into any other data structure, for instance, your application models.</li>
+<li><strong>Transformer</strong>. While <code>hydrator</code> is very useful when you want to have your models for further use, you still might need to change what your view sees. <code>Transformer</code> solves that, pass a transformer to your data handler settings and data-grid will call it before returning the results to the view.</li>
+</ul>
+
+<blockquote>
+<p><strong>Note:</strong> Both <code>hydrator</code> and <code>transformer</code> can either be passed into your data handler settings as closures, or implement provided interface contracts.</p>
+</blockquote>
+
+<div name="front-end" data-unique="front-end"></div><h3>Front end</h3>
+
+<p>On the front end data-grid comes with fully customizable js component which provides the following features.</p>
+
+<ul>
+<li><strong>Layouts</strong>. Instead of predefined templates data-grid comes with flexible layout system allowing the creation of modern dynamic UI.</li>
+<li><strong>Filters</strong>. New filters allow you to easily customize the filter behavior and to add your own filter types. You can define you filters via our streamlined DOM API, or as filter presets via constructor options.</li>
+<li><strong>Events</strong>. You can observe each phase of the data-grid lifecycle and change the behavior with improved events, each of them providing more context on what exactly has happened.</li>
+<li><strong>History states</strong>. Cleaner urls.</li>
+</ul><div name="quick-example" data-unique="quick-example"></div><h3>Quick Example</h3>
+
+<pre class="prettyprint lang-php"><code><span class="kwd">use</span><span class="pln"> </span><span class="typ">App</span><span class="pln">\Models\Post</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">use</span><span class="pln"> </span><span class="typ">Cartalyst</span><span class="pln">\DataGrid\DataGrid</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">use</span><span class="pln"> </span><span class="typ">Cartalyst</span><span class="pln">\DataGrid\DataHandlers\CollectionHandler</span><span class="pun">;</span><span class="pln">
+
+$settings </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+    </span><span class="str">'columns'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">[</span><span class="str">'id'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'slug'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'title'</span><span class="pun">],</span><span class="pln">
+</span><span class="pun">];</span><span class="pln">
+
+$handler </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">CollectionHandler</span><span class="pun">(</span><span class="typ">Post</span><span class="pun">::</span><span class="pln">all</span><span class="pun">(),</span><span class="pln"> $settings</span><span class="pun">);</span><span class="pln">
+
+</span><span class="kwd">return</span><span class="pln"> </span><span class="typ">DataGrid</span><span class="pun">::</span><span class="pln">make</span><span class="pun">(</span><span class="pln">$handler</span><span class="pun">);</span></code></pre><div name="setup" data-unique="setup"></div><h2>Setup</h2>
+
+<div name="installation" data-unique="installation"></div><h3>Installation</h3>
+
+<p>Cartalyst packages utilize <a href="http://getcomposer.org/" target="_blank">Composer</a>, for more information on how to install Composer please read the <a href="https://getcomposer.org/doc/00-intro.md" target="_blank">Composer Documentation</a>.</p>
+
+<h4 id="preparation"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#preparation"><i class="fa fa-link"></i></a>Preparation</h4>
+
+<p>Open your <code>composer.json</code> file and add the following to the <code>require</code> array:</p>
+
+<pre class="prettyprint"><code><span class="str">"cartalyst/data-grid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"^5.0"</span></code></pre>
+
+<p>Add the following lines after the <code>require</code> array on your <code>composer.json</code> file:</p>
+
+<pre class="prettyprint"><code><span class="str">"repositories"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln"> </span><span class="str">"type"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"composer"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"url"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"https://packages.cartalyst.com"</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">]</span></code></pre>
+
+<blockquote>
+<p><strong>Note:</strong> Make sure that after the required changes your <code>composer.json</code> file is valid by running <code>composer validate</code>.</p>
+</blockquote>
+
+<h4 id="install-the-dependencies"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#install-the-dependencies"><i class="fa fa-link"></i></a>Install the dependencies</h4>
+
+<p>Run the <code>composer install</code> or <code>composer update</code> to install or update the new requirement.</p><div name="usage" data-unique="usage"></div><h2>Usage</h2>
+
+<p>In this section we'll show how you can utilize the data grid package.</p>
+
+<p>Cartalyst's Data Grid package provides a couple of ways to interact with. The most basic way is to instantiate the <code>Cartalyst\DataGrid\DataGrid</code> class with Cartalyst's default built-in <code>Cartalyst\DataGrid\DataHandlers\CollectionHandler</code> for data handling.</p>
+
+<p>After creating a Data Grid object you can use the data handler to interact with your result set.</p>
+
+<div name="creating-a-data-grid-object" data-unique="creating-a-data-grid-object"></div><h3>Creating a Data Grid Object</h3>
+
+<p>Creating a Data Grid object can be done by calling the <code>make</code> function on the Data Grid environment.</p>
+
+<pre class="prettyprint lang-php"><code><span class="pln">$handler </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">CollectionHandler</span><span class="pun">(</span><span class="pln">$data</span><span class="pun">,</span><span class="pln"> $settings</span><span class="pun">);</span><span class="pln">
+$dataGrid </span><span class="pun">=</span><span class="pln"> </span><span class="typ">DataGrid</span><span class="pun">::</span><span class="pln">make</span><span class="pun">(</span><span class="pln">$handler</span><span class="pun">);</span></code></pre>
+
+<p>The <code>$data</code> variable must contain all of the data you want to filter. This can be any sort of data type as long as it can be handled by your data handlers. The <code>$settings</code> variable must contain an array of the settings, including the columns for each data object to include in the result set.</p>
+
+<p>Calling the <code>make</code> helper method on the <code>DataGrid</code> class will send back an instance of <code>Cartalyst\DataGrid\DataGrid</code>.</p>
+
+<p>The data provided for CollectionHandler can hold data objects of the following types:</p>
+
+<ul>
+<li>An array</li>
+<li>An object which is an instance of or extends the <code>stdClass</code> object</li>
+<li>An object which has <code>toArray</code> method</li>
+</ul>
+
+<p>A basic example of creating a Data Grid object could be:</p>
+
+<pre class="prettyprint lang-php"><code><span class="pln">$object </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">StdClass</span><span class="pun">;</span><span class="pln">
+$object</span><span class="pun">-&gt;</span><span class="pln">title </span><span class="pun">=</span><span class="pln"> </span><span class="str">'foo'</span><span class="pun">;</span><span class="pln">
+$object</span><span class="pun">-&gt;</span><span class="pln">age </span><span class="pun">=</span><span class="pln"> </span><span class="lit">20</span><span class="pun">;</span><span class="pln">
+
+$data </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+    </span><span class="pun">[</span><span class="pln">
+        </span><span class="str">'title'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'bar'</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">'age'</span><span class="pln">   </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">34</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">],</span><span class="pln">
+    $object</span><span class="pun">,</span><span class="pln">
+</span><span class="pun">];</span><span class="pln">
+
+$settings </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+    </span><span class="str">'columns'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        </span><span class="str">'title'</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">'age'</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">]</span><span class="pln">
+</span><span class="pun">];</span><span class="pln">
+
+$handler </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">CollectionHandler</span><span class="pun">(</span><span class="pln">$data</span><span class="pun">,</span><span class="pln"> $settings</span><span class="pun">);</span><span class="pln">
+$dataGrid </span><span class="pun">=</span><span class="pln"> </span><span class="typ">DataGrid</span><span class="pun">::</span><span class="pln">make</span><span class="pun">(</span><span class="pln">$handler</span><span class="pun">);</span></code></pre>
+
+<blockquote>
+<p><strong>Note:</strong> If a data object in the <code>$data</code> set doesn't have a column set in the <code>columns</code> settings, it will return <code>null</code> in the result set for that column.</p>
+</blockquote>
+
+<p>You can also rename columns by defining them as a key/value pair with the original name being the key and the new name being the value.</p>
+
+<pre class="prettyprint lang-php"><code><span class="pln">$handler </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">CollectionHandler</span><span class="pun">(</span><span class="pln">$data</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+    </span><span class="str">'columns'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        </span><span class="str">'title'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'new_title_column_name'</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">'age'</span><span class="pln">   </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'new_age_column_name'</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">]</span><span class="pln">
+</span><span class="pun">]);</span></code></pre>
+
+<div name="settings" data-unique="settings"></div><h3>Settings</h3>
+
+<p>Settings can be passed as a second parameter to the DataHandler constructor.</p>
+
+<pre class="prettyprint lang-php"><code><span class="pln">$handler </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">CollectionHandler</span><span class="pun">(</span><span class="pln">$data</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+    </span><span class="str">'columns'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">[</span><span class="str">'title'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'age'</span><span class="pun">],</span><span class="pln">
+    </span><span class="str">'sort'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        </span><span class="str">'column'</span><span class="pln">    </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'age'</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">'direction'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'desc'</span><span class="pln">
+    </span><span class="pun">]</span><span class="pln">
+</span><span class="pun">]);</span></code></pre>
+
+<p>Below is a list of available options</p>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sort</td>
+<td>array</td>
+<td></td>
+<td>Default sort if no sort has been provided.</td>
+</tr>
+<tr>
+<td>method</td>
+<td>string</td>
+<td>null</td>
+<td>Default method if no throttle has been provided.</td>
+</tr>
+<tr>
+<td>throttle</td>
+<td>int</td>
+<td>null</td>
+<td>Default throttle if no throttle has been provided.</td>
+</tr>
+<tr>
+<td>threshold</td>
+<td>int</td>
+<td>null</td>
+<td>Default threshold if no throttle has been provided.</td>
+</tr>
+</tbody>
+</table><div name="concepts" data-unique="concepts"></div><h2>Concepts</h2>
+
+<div name="provider" data-unique="provider"></div><h3>Provider</h3>
+
+<p><code>Cartalyst\DataGrid\Contracts\Provider</code> is a contract that handles request params and data-grid's dispatch requests. Data-grid has two default implementations.</p>
+
+<h4 id="requestprovider"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#requestprovider"><i class="fa fa-link"></i></a>RequestProvider</h4>
+
+<p>Filter, sort and pagination params are parsed from http request.</p>
+
+<pre class="prettyprint lang-php"><code><span class="kwd">use</span><span class="pln"> </span><span class="typ">App</span><span class="pln">\Models\Post</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">use</span><span class="pln"> </span><span class="typ">Cartalyst</span><span class="pln">\DataGrid\DataGrid</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">use</span><span class="pln"> </span><span class="typ">Cartalyst</span><span class="pln">\DataGrid\DataHandlers\CollectionHandler</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">use</span><span class="pln"> </span><span class="typ">Cartalyst</span><span class="pln">\DataGrid\Providers\RequestProvider</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">use</span><span class="pln"> </span><span class="typ">Symfony</span><span class="pln">\Component\HttpFoundation\Request</span><span class="pun">;</span><span class="pln">
+
+$settings </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+    </span><span class="str">'columns'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">[</span><span class="str">'id'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'slug'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'title'</span><span class="pun">],</span><span class="pln">
+</span><span class="pun">];</span><span class="pln">
+
+$handler </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">CollectionHandler</span><span class="pun">(</span><span class="typ">Post</span><span class="pun">::</span><span class="pln">all</span><span class="pun">(),</span><span class="pln"> $settings</span><span class="pun">);</span><span class="pln">
+$provider </span><span class="pun">=</span><span class="pln"> </span><span class="typ">RequestProvider</span><span class="pun">(</span><span class="typ">Request</span><span class="pun">::</span><span class="pln">createFromGlobals</span><span class="pun">());</span><span class="pln">
+
+</span><span class="kwd">return</span><span class="pln"> </span><span class="typ">DataGrid</span><span class="pun">::</span><span class="pln">make</span><span class="pun">(</span><span class="pln">$handler</span><span class="pun">,</span><span class="pln"> $provider</span><span class="pun">);</span></code></pre>
+
+<blockquote>
+<p><strong>Note:</strong> You don't need to set up RequestProvider, it will be instantiated by default.</p>
+</blockquote>
+
+<h4 id="arrayprovider"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#arrayprovider"><i class="fa fa-link"></i></a>ArrayProvider</h4>
+
+<p>Params will be instantiated from an array.</p>
+
+<pre class="prettyprint lang-php"><code><span class="kwd">use</span><span class="pln"> </span><span class="typ">App</span><span class="pln">\Models\Post</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">use</span><span class="pln"> </span><span class="typ">Cartalyst</span><span class="pln">\DataGrid\DataGrid</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">use</span><span class="pln"> </span><span class="typ">Cartalyst</span><span class="pln">\DataGrid\DataHandlers\CollectionHandler</span><span class="pun">;</span><span class="pln">
+
+$settings </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+    </span><span class="str">'columns'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">[</span><span class="str">'id'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'slug'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'title'</span><span class="pun">],</span><span class="pln">
+</span><span class="pun">];</span><span class="pln">
+
+$handler </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">CollectionHandler</span><span class="pun">(</span><span class="typ">Post</span><span class="pun">::</span><span class="pln">all</span><span class="pun">(),</span><span class="pln"> $settings</span><span class="pun">);</span><span class="pln">
+$provider </span><span class="pun">=</span><span class="pln"> </span><span class="typ">RequestProvider</span><span class="pun">(</span><span class="typ">Request</span><span class="pun">::</span><span class="pln">createFromGlobals</span><span class="pun">());</span><span class="pln">
+
+</span><span class="kwd">return</span><span class="pln"> </span><span class="typ">DataGrid</span><span class="pun">::</span><span class="pln">make</span><span class="pun">(</span><span class="pln">$handler</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+    </span><span class="str">'filters'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        </span><span class="pun">[</span><span class="str">'country'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'US'</span><span class="pun">],</span><span class="pln">
+        </span><span class="pun">[</span><span class="str">'state'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'New Mexico'</span><span class="pun">],</span><span class="pln">
+    </span><span class="pun">],</span><span class="pln">
+    </span><span class="str">'sort'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        </span><span class="pun">[</span><span class="str">'column'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'population’, '</span><span class="pln">direction</span><span class="str">' =&gt; '</span><span class="pln">desc</span><span class="str">']
+    ],
+    '</span><span class="pln">page</span><span class="str">' =&gt; 1,
+]);</span></code></pre>
+
+<div name="handler" data-unique="handler"></div><h3>Handler</h3>
+
+<p>The data handler is the class that handles and filters the data you passed along. In the examples below we'll go over the functionality of the data handler.</p>
+
+<h4 id="collection-handler"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#collection-handler"><i class="fa fa-link"></i></a>Collection Handler <a name="collection-handler"></a></h4>
+
+<p>The collection handler can handle the following types of data.</p>
+
+<ul>
+<li>Cartalyst Collection objects</li>
+<li>Arrays with data objects which could be:
+<ul>
+<li>An array</li>
+<li>An object which is an instance of or extends the <code>stdClass</code> object</li>
+<li>An object which can be transformed to an array (i.e. has <code>toArray</code> method)</li>
+</ul></li>
+</ul>
+
+<p>If you'd like to use the <code>CollectionHandler</code> data handler you need to pass it to Data Grid.</p>
+
+<pre class="prettyprint lang-php"><code><span class="kwd">use</span><span class="pln"> </span><span class="typ">Illuminate</span><span class="pln">\Support\Collection</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">use</span><span class="pln"> </span><span class="typ">Cartalyst</span><span class="pln">\DataGrid\DataHandlers\CollectionHandler</span><span class="pun">;</span><span class="pln">
+
+$collection </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Collection</span><span class="pun">::</span><span class="pln">make</span><span class="pun">(</span><span class="pln">$array</span><span class="pun">);</span><span class="pln">
+$handler </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">CollectionHandler</span><span class="pun">(</span><span class="pln">$collection</span><span class="pun">,</span><span class="pln"> $settings</span><span class="pun">);</span><span class="pln">
+</span><span class="com">// or $handler = new CollectionHandler($array, $settings);</span><span class="pln">
+
+$dataGrid </span><span class="pun">=</span><span class="pln"> </span><span class="typ">DataGrid</span><span class="pun">::</span><span class="pln">make</span><span class="pun">(</span><span class="pln">$handler</span><span class="pun">);</span></code></pre>
+
+<h4 id="database-handler"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#database-handler"><i class="fa fa-link"></i></a>Database Handler <a name="database-handler"></a></h4>
+
+<p>The database handler can handle the following types of data.</p>
+
+<ul>
+<li>Queries</li>
+<li>Query results</li>
+<li>Eloquent Models &amp; Relationships</li>
+</ul>
+
+<p>If you'd like to use the <code>DatabaseHandler</code> data handler you need to add <code>data-grid-laravel</code> package to your composer requirements.</p>
+
+<pre class="prettyprint lang-php"><code><span class="kwd">use</span><span class="pln"> </span><span class="typ">Cartalyst</span><span class="pln">\DataGrid\Laravel\DataHandlers\DatabaseHandler</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">use</span><span class="pln"> </span><span class="typ">App</span><span class="pln">\MyModel</span><span class="pun">;</span><span class="pln">
+
+$handler </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">DatabaseHandler</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">MyModel</span><span class="pun">(),</span><span class="pln"> $settings</span><span class="pun">);</span><span class="pln">
+</span><span class="com">// or $handler = new DatabaseHandler(DB::table('my_table'), $settings);</span><span class="pln">
+
+$dataGrid </span><span class="pun">=</span><span class="pln"> </span><span class="typ">DataGrid</span><span class="pun">::</span><span class="pln">make</span><span class="pun">(</span><span class="pln">$handler</span><span class="pun">);</span></code></pre>
+
+<blockquote>
+<p><strong>Note:</strong> In order to use Database Handler, you need to use <code>data-grid-laravel</code> add-on. Check out the docs on <a href="https://cartalyst.com/manual/data-grid/5.x#integration-laravel">integration with Laravel</a>.</p>
+</blockquote>
+
+<h4 id="custom-data-handlers"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#custom-data-handlers"><i class="fa fa-link"></i></a>Custom Data Handlers</h4>
+
+<p>In addition to the default data handlers provided by the package, you can create your own custom data handlers as well. All data handlers need to extend the abstract <code>Cartalyst\DataGrid\DataHandlers\BaseHandler</code> class.</p>
+
+<pre class="prettyprint lang-php"><code><span class="kwd">use</span><span class="pln"> </span><span class="typ">Cartalyst</span><span class="pln">\DataGrid\DataHandlers\BaseHandler</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">CustomHandler</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">BaseHandler</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+</span><span class="pun">}</span></code></pre>
+
+<p>Specific handlers can be created to handle specific sets of data like framework specific result sets or a certain service's API result responses.</p>
+
+<div name="parameters" data-unique="parameters"></div><h3>Parameters</h3>
+
+<p>Data Handler provides ParameterBag object with result set parameters.</p>
+
+<pre class="prettyprint"><code><span class="pln">$params </span><span class="pun">=</span><span class="pln"> $handler</span><span class="pun">-&gt;</span><span class="pln">getParams</span><span class="pun">();</span></code></pre>
+
+<p>Get the total amount of results.</p>
+
+<pre class="prettyprint lang-php"><code><span class="pln">$totalCount </span><span class="pun">=</span><span class="pln"> $params</span><span class="pun">-&gt;</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'total'</span><span class="pun">);</span></code></pre>
+
+<p>Get the total amount of filtered results.</p>
+
+<pre class="prettyprint lang-php"><code><span class="pln">$filteredCount </span><span class="pun">=</span><span class="pln"> $params</span><span class="pun">-&gt;</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'filtered'</span><span class="pun">);</span></code></pre>
+
+<p>Get the current page.</p>
+
+<pre class="prettyprint lang-php"><code><span class="pln">$page </span><span class="pun">=</span><span class="pln"> $params</span><span class="pun">-&gt;</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'page'</span><span class="pun">);</span></code></pre>
+
+<p>Get the number of pages.</p>
+
+<pre class="prettyprint lang-php"><code><span class="pln">$pagesCount </span><span class="pun">=</span><span class="pln"> $params</span><span class="pun">-&gt;</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'pages'</span><span class="pun">);</span></code></pre>
+
+<p>Get the previous page.</p>
+
+<pre class="prettyprint lang-php"><code><span class="pln">$previousPage </span><span class="pun">=</span><span class="pln"> $params</span><span class="pun">-&gt;</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'previous_page'</span><span class="pun">);</span></code></pre>
+
+<p>Get the next page.</p>
+
+<pre class="prettyprint lang-php"><code><span class="pln">$nextPage </span><span class="pun">=</span><span class="pln"> $params</span><span class="pun">-&gt;</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'next_page'</span><span class="pun">);</span></code></pre>
+
+<p>Get the number of results per page.</p>
+
+<pre class="prettyprint lang-php"><code><span class="pln">$perPage </span><span class="pun">=</span><span class="pln"> $params</span><span class="pun">-&gt;</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'per_page'</span><span class="pun">);</span></code></pre>
+
+<blockquote>
+<p><strong>Note:</strong> Parameters will be returned to the response along with the results, so in case you need to change the output, it should be done in your custom handler.</p>
+</blockquote><div name="result-sets" data-unique="result-sets"></div><h2>Result Sets</h2>
+
+<p>After instantiating a Data Grid object you have a couple of options to work with the data result sets. Depending on the request provider which you registered with your environment, the implementation of these methods can differ. In the examples below we're going to assume you're using the default <code>Cartalyst\DataGrid\Providers\RequestProvider</code> request provider.</p>
+
+<p>You can filter results by sending specific request parameters along with your HTTP request. Your request provider will catch these so your data handler can filter the data based on these request parameters.</p>
+
+<div name="generating-results" data-unique="generating-results"></div><h3>Generating Results</h3>
+
+<p>You can convert the result set from the Data Grid object to an array or JSON response by calling the <code>toArray</code> or <code>toJson</code> functions.</p>
+
+<pre class="prettyprint lang-php"><code><span class="kwd">use</span><span class="pln"> </span><span class="typ">Cartalyst</span><span class="pln">\DataGrid\DataGrid</span><span class="pun">;</span><span class="pln">
+
+$dataGrid </span><span class="pun">=</span><span class="pln"> </span><span class="typ">DataGrid</span><span class="pun">::</span><span class="pln">make</span><span class="pun">(</span><span class="pln">$handler</span><span class="pun">);</span><span class="pln">
+
+</span><span class="com">// Retrieve the result set as an array.</span><span class="pln">
+$array </span><span class="pun">=</span><span class="pln"> $dataGrid</span><span class="pun">-&gt;</span><span class="pln">toArray</span><span class="pun">();</span><span class="pln">
+
+</span><span class="com">// Retrieve the result set as a JSON response.</span><span class="pln">
+$json </span><span class="pun">=</span><span class="pln"> $dataGrid</span><span class="pun">-&gt;</span><span class="pln">toJson</span><span class="pun">();</span></code></pre>
+
+<p>The returned response would look something like this:</p>
+
+<pre class="prettyprint"><code><span class="pun">{</span><span class="pln">
+    </span><span class="str">"total"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"filtered"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"page"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"pages"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"previous_page"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"next_page"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"per_page"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"sort"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="str">"column"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"name"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"direction"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"asc"</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    </span><span class="str">"results"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"John Doe"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"age"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">22</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"location"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"New York"</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">...</span><span class="pln">
+    </span><span class="pun">]</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>The response contains some useful information like the total number of results, the amount of filtered results, the current, previous and next page and a list with all of the results for the current page.</p>
+
+<blockquote>
+<p><strong>Note:</strong> When sending the Data Grid object to the browser, it will be automatically converted to a JSON response. This is very useful, for example, when building APIs.</p>
+</blockquote>
+
+<div name="sorting-results" data-unique="sorting-results"></div><h3>Sorting Results</h3>
+
+<p>You can sort the result set by sending a request parameter with the <code>sort</code> key.</p>
+
+<pre class="prettyprint"><code><span class="pln">http</span><span class="pun">:</span><span class="com">//example.com/grid?sort[0][column]=name&amp;sort[0][direction]=desc</span></code></pre>
+
+<p>This will sort the results by name in descending order.</p>
+
+<div name="switching-pages" data-unique="switching-pages"></div><h3>Switching Pages</h3>
+
+<p>Changing the page in a result set can be done by sending a request parameter with the <code>page</code> key.</p>
+
+<pre class="prettyprint"><code><span class="pln">http</span><span class="pun">:</span><span class="com">//example.com/grid?page=2</span></code></pre>
+
+<p>This would show the results on the second page of the result set.</p>
+
+<div name="filter-results" data-unique="filter-results"></div><h3>Filter Results</h3>
+
+<p>You can filter results by sending a request parameter with the <code>filters</code> key. The filters request parameter must provide filters based as a key (column) and value (column value) array.</p>
+
+<p>For example:</p>
+
+<pre class="prettyprint"><code><span class="pln">http</span><span class="pun">:</span><span class="com">//testing.loc/grid?filters[name]=foo&amp;filters[age]=24</span></code></pre>
+
+<p>This would show only results which have a foo name and an age of 24.</p>
+
+<div name="paginating-results" data-unique="paginating-results"></div><h3>Paginating Results</h3>
+
+<p>There are three request parameters you can use to paginate a result set: <code>method</code>, <code>threshold</code> and <code>throttle</code>.</p>
+
+<p><code>method</code> is the default method of pagination, <code>single</code>, <code>group</code> or <code>infinite</code> are allowed values, single will paginate based on a results per page (<code>throttle</code> value), group will paginate based on pages per results (<code>throttle</code> value) meaning it will try to paginate your result set into this number of pages.</p>
+
+<p><code>threshold</code> is the number of results before pagination is applied to the result set. For example: if you set this to 5 then only when there are more than 5 results, pagination would be applied. The default for this parameter is 100.</p>
+
+<p><code>throttle</code> is the maximum amount of results you want to show on a single page incase of using the default <code>single</code> method, when using the <code>group</code> method this value will refer to the ideal number of pages to show based on the results.</p>
+
+<p>An example of these request parameters can be:</p>
+
+<pre class="prettyprint"><code><span class="pln">http</span><span class="pun">:</span><span class="com">//example.com/grid?threshold=5&amp;method=group&amp;throttle=10</span></code></pre>
+
+<p>In this example, the data handler will start paginating the results when there are more than 5 results. When there are less than 100 results, pagination will be created with 10 pages containing a number of results for each page based on dividing the total number of results by 10 (<code>throttle</code>).</p><div name="javascript-plugin" data-unique="javascript-plugin"></div><h2>Javascript Plugin</h2>
+
+<div name="introduction22" data-unique="introduction22"></div><h3>Introduction</h3>
+
+<p>One of our goals with Data Grid was to leave the front end HTML up to you, and avoid what most plugins do by forcing you into a specific container. We built a Javascript plugin (<code>data-grid.js</code>) that works together with the <a href="https://lodash.com/" target="_blank">lodash</a> rendering engine to allow you to easily build flexible data grids.</p>
+
+<h4 id="requirements"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#requirements"><i class="fa fa-link"></i></a>Requirements</h4>
+
+<p>Using <code>data-grid.js</code> requires the following:</p>
+
+<ul>
+<li><a href="https://lodash.com/" target="_blank">lodash</a> v3.10.0 or later</li>
+<li><a href="http://exosjs.com/" target="_blank">exoskeleton</a> v0.6.3 or later</li>
+<li><a href="http://jquery.com/" target="_blank">jQuery</a> v1.9.1 or later</li>
+<li><a href="http://momentjs.com/" target="_blank">Moment.js</a> v2.6.0 or later <strong>Optional (filter using custom date formats)</strong></li>
+</ul>
+
+<h4 id="installation"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#installation"><i class="fa fa-link"></i></a>Installation</h4>
+
+<p>Add jQuery, lodash, exoskeleton and <code>data-grid.js</code> to the <code>&lt;head&gt;</code> section of your page.</p>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+</span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"packages/cartalyst/data-grid/js/lodash.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+</span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"packages/cartalyst/data-grid/js/exosjs.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+</span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"packages/cartalyst/data-grid/js/data-grid.js"</span><span class="tag">&gt;&lt;/script&gt;</span></code></pre>
+
+<blockquote>
+<p><strong>Note</strong> Make sure you publish the assets using <code>php artisan asset:publish cartalyst/data-grid</code> or update the paths accordingly.</p>
+</blockquote>
+
+<h4 id="layouts"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#layouts"><i class="fa fa-link"></i></a>Layouts</h4>
+
+<p>Instead of predefined templates Data Grid finds all layouts and relates them to appropriate container using a naming pattern, <code>layout</code>.</p>
+
+<p>Allows the creation of as many layout templates per data grid as desired.</p>
+
+<p><code>&lt;ul data-grid-layout="results" data-grid="foo"&gt;&lt;/ul&gt;</code></p>
+
+<p>The following would relate results</p>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/template"</span><span class="pln"> </span><span class="atn">data-grid-template</span><span class="pun">=</span><span class="atv">"results"</span><span class="pln"> </span><span class="atn">data-grid</span><span class="pun">=</span><span class="atv">"foo"</span><span class="tag">&gt;</span><span class="pln">
+
+    </span><span class="pun">&lt;%</span><span class="pln"> _</span><span class="pun">.</span><span class="pln">each</span><span class="pun">(</span><span class="pln">response</span><span class="pun">.</span><span class="pln">results</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">r</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">%&gt;</span><span class="pln">
+
+        </span><span class="pun">&lt;</span><span class="pln">li</span><span class="pun">&gt;</span><span class="pln">
+            </span><span class="pun">&lt;%=</span><span class="pln"> r</span><span class="pun">.</span><span class="pln">image </span><span class="pun">%&gt;</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> </span><span class="pun">&lt;%=</span><span class="pln"> r</span><span class="pun">.</span><span class="pln">name </span><span class="pun">%&gt;</span><span class="pln">
+        </span><span class="pun">&lt;/</span><span class="pln">li</span><span class="pun">&gt;</span><span class="pln">
+
+    </span><span class="pun">&lt;%</span><span class="pln"> </span><span class="pun">});</span><span class="pln"> </span><span class="pun">%&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;/script&gt;</span></code></pre>
+
+<p>Data-grid by default has three layouts:</p>
+
+<pre class="prettyprint lang-js"><code><span class="pln">layouts</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    results</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        template</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[data-grid-template="results"]'</span><span class="pun">,</span><span class="pln">
+        layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[data-grid-layout="results"]'</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    filters</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        template</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[data-grid-template="filters"]'</span><span class="pun">,</span><span class="pln">
+        layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[data-grid-layout="filters"]'</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    pagination</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        template</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[data-grid-template="pagination"]'</span><span class="pun">,</span><span class="pln">
+        layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[data-grid-layout="pagination"]'</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>Each layout is represented by key and layout options. Developers can additionally provide <code>action</code>. So here's the full default options for <code>results</code> layout:</p>
+
+<pre class="prettyprint lang-js"><code><span class="pun">{</span><span class="pln">
+    template</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[data-grid-template="results"]'</span><span class="pun">,</span><span class="pln"> </span><span class="com">// selector for our template script</span><span class="pln">
+    layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[data-grid-layout="results"]'</span><span class="pun">,</span><span class="pln"> </span><span class="com">// selector for our data placeholder</span><span class="pln">
+    action</span><span class="pun">:</span><span class="pln"> </span><span class="str">'update'</span><span class="pln"> </span><span class="com">// could be set as 'append' or 'prepend'</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>In case <code>action</code> is set to 'append', data will be appended to the layout element.</p>
+
+<p>Layout can be disabled via DOM param:</p>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;table</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"table table-striped table-bordered table-hover"</span><span class="pln"> </span><span class="atn">data-grid-layout</span><span class="pun">=</span><span class="atv">"results"</span><span class="pln"> </span><span class="atn">data-grid-layout-disabled</span><span class="pln"> </span><span class="atn">data-grid</span><span class="pun">=</span><span class="atv">"standard"</span><span class="tag">&gt;</span></code></pre>
+
+<p>Layouts will be refreshed <em>after</em> results are retrieved, and they are not distinguished: hence, all layouts will be refreshed on each request and if user wants infinite results pagination, <code>action</code> for designated layout must be set to 'append' to prevent the existing results from being cleared before adding the new ones.</p>
+
+<p>All layout and template references are cached. In case developer wants to change template or page structure, new layouts can be referenced like this:</p>
+
+<pre class="prettyprint lang-js"><code><span class="pln">grid</span><span class="pun">.</span><span class="pln">setLayout</span><span class="pun">(</span><span class="str">'results_updated'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    template</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[data-grid-template="results_updated"]'</span><span class="pun">,</span><span class="pln">
+    layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[data-grid-layout="results_newlayout"]'</span><span class="pln">
+</span><span class="pun">});</span></code></pre>
+
+<p>or update multiple layouts.</p>
+
+<pre class="prettyprint lang-js"><code><span class="pln">grid</span><span class="pun">.</span><span class="pln">setLayouts</span><span class="pun">({</span><span class="pln">
+
+    </span><span class="str">'results'</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln"> </span><span class="com">// this will remove old `results` reference</span><span class="pln">
+
+    </span><span class="str">'results_updated'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        template</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[data-grid-template="results_updated"]'</span><span class="pun">,</span><span class="pln">
+        layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[data-grid-layout="results_newlayout"]'</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+
+    </span><span class="str">'filters'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[data-grid-layout="filters_new"]'</span><span class="pln"> </span><span class="com">// Partially updating the existing configs (only the layout)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">});</span></code></pre>
+
+<h4 id="the-html"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#the-html"><i class="fa fa-link"></i></a>The HTML</h4>
+
+<p>Data Grid by default requires three elements for instantiation: a results container, pagination container and a applied filters container. Each of these containers will require a corresponding template that is responsible for rendering the markup.</p>
+
+<blockquote>
+<p><strong>Note:</strong> The <code>data-grid-template</code> attribute is required on all templates for identification by the script.</p>
+</blockquote>
+
+<h5>Templates</h5>
+
+<p>The following lodash templates are required for every data grid and are defined using the <code>data-grid-template</code> attribute.</p>
+
+<table>
+<thead>
+<tr>
+<th>Data template</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>results</td>
+<td>Renders the results.</td>
+</tr>
+<tr>
+<td>filters</td>
+<td>Renders applied filters.</td>
+</tr>
+<tr>
+<td>pagination</td>
+<td>Renders pagination.</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Results container</strong></p>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;table</span><span class="pln"> </span><span class="atn">data-grid-layout</span><span class="pun">=</span><span class="atv">"results"</span><span class="pln"> </span><span class="atn">data-grid</span><span class="pun">=</span><span class="atv">"main"</span><span class="tag">&gt;</span><span class="pln">
+
+    </span><span class="tag">&lt;thead&gt;</span><span class="pln">
+
+        </span><span class="tag">&lt;tr&gt;</span><span class="pln">
+
+            </span><span class="tag">&lt;td&gt;</span><span class="pln">City</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+            </span><span class="tag">&lt;td&gt;</span><span class="pln">Population</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+
+        </span><span class="tag">&lt;/tr&gt;</span><span class="pln">
+
+    </span><span class="tag">&lt;/thead&gt;</span><span class="pln">
+
+    </span><span class="tag">&lt;tbody&gt;&lt;/tbody&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;/table&gt;</span></code></pre>
+
+<p><strong>Results template</strong></p>
+
+<pre class="prettyprint lang-js"><code><span class="pun">&lt;</span><span class="pln">script type</span><span class="pun">=</span><span class="str">"text/template"</span><span class="pln"> data</span><span class="pun">-</span><span class="pln">grid</span><span class="pun">=</span><span class="str">"main"</span><span class="pln"> data</span><span class="pun">-</span><span class="pln">grid</span><span class="pun">-</span><span class="pln">template</span><span class="pun">=</span><span class="str">"results"</span><span class="pun">&gt;</span><span class="pln">
+
+    </span><span class="pun">&lt;%</span><span class="pln"> </span><span class="kwd">var</span><span class="pln"> results </span><span class="pun">=</span><span class="pln"> response</span><span class="pun">.</span><span class="pln">results</span><span class="pun">;</span><span class="pln"> </span><span class="pun">%&gt;</span><span class="pln">
+
+    </span><span class="pun">&lt;%</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">_</span><span class="pun">.</span><span class="pln">isEmpty</span><span class="pun">(</span><span class="pln">results</span><span class="pun">))</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">%&gt;</span><span class="pln">
+        </span><span class="pun">&lt;</span><span class="pln">tr</span><span class="pun">&gt;</span><span class="pln">
+            </span><span class="pun">&lt;</span><span class="pln">td colspan</span><span class="pun">=</span><span class="str">"2"</span><span class="pun">&gt;</span><span class="typ">No</span><span class="pln"> </span><span class="typ">Results</span><span class="pun">&lt;</span><span class="str">/td&gt;
+        &lt;/</span><span class="pln">tr</span><span class="pun">&gt;</span><span class="pln">
+    </span><span class="pun">&lt;%</span><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">%&gt;</span><span class="pln">
+
+        </span><span class="pun">&lt;%</span><span class="pln"> _</span><span class="pun">.</span><span class="pln">each</span><span class="pun">(</span><span class="pln">results</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">r</span><span class="pun">){</span><span class="pln"> </span><span class="pun">%&gt;</span><span class="pln">
+
+            </span><span class="pun">&lt;</span><span class="pln">tr</span><span class="pun">&gt;</span><span class="pln">
+
+                </span><span class="pun">&lt;</span><span class="pln">td</span><span class="pun">&gt;&lt;%=</span><span class="pln"> r</span><span class="pun">.</span><span class="pln">city </span><span class="pun">%&gt;&lt;/</span><span class="pln">td</span><span class="pun">&gt;</span><span class="pln">
+                </span><span class="pun">&lt;</span><span class="pln">td</span><span class="pun">&gt;&lt;%=</span><span class="pln"> r</span><span class="pun">.</span><span class="pln">population </span><span class="pun">%&gt;&lt;/</span><span class="pln">td</span><span class="pun">&gt;</span><span class="pln">
+
+            </span><span class="pun">&lt;</span><span class="str">/tr&gt;
+
+        &lt;% }); %&gt;
+
+    &lt;% } %&gt;
+
+&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></code></pre>
+
+<p>The required <code>data-grid</code> attribute will allow you to create multiple Data Grids on a single page and the <code>results</code> data attribute will mark it as the layout container for our template. If your results container is a table, we will automatically render the template in the <code>&lt;tbody&gt;</code> element.</p>
+
+<p>You might notice that the <code>&lt;% ... %&gt;</code> is the default underscore brace syntax. You can always change this behaviour by changing the template_settings on the <a href="https://cartalyst.com/manual/data-grid/5.x#options">plugin's options</a>.</p>
+
+<p><strong>Pagination container</strong></p>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">data-grid-layout</span><span class="pun">=</span><span class="atv">"pagination"</span><span class="pln"> </span><span class="atn">data-grid</span><span class="pun">=</span><span class="atv">"main"</span><span class="tag">&gt;&lt;/ul&gt;</span></code></pre>
+
+<p><strong>Pagination template</strong></p>
+
+<pre class="prettyprint lang-js"><code><span class="pun">&lt;</span><span class="pln">script type</span><span class="pun">=</span><span class="str">"text/template"</span><span class="pln"> data</span><span class="pun">-</span><span class="pln">grid</span><span class="pun">=</span><span class="str">"main"</span><span class="pln"> data</span><span class="pun">-</span><span class="pln">grid</span><span class="pun">-</span><span class="pln">template</span><span class="pun">=</span><span class="str">"pagination"</span><span class="pun">&gt;</span><span class="pln">
+
+    </span><span class="pun">&lt;%</span><span class="pln">
+        </span><span class="com">// Declare some variables to avoid duplication</span><span class="pln">
+        </span><span class="kwd">var</span><span class="pln"> previousPage </span><span class="pun">=</span><span class="pln"> pagination</span><span class="pun">.</span><span class="pln">previousPage</span><span class="pun">;</span><span class="pln">
+        </span><span class="kwd">var</span><span class="pln"> nextPage </span><span class="pun">=</span><span class="pln"> pagination</span><span class="pun">.</span><span class="pln">nextPage</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="com">// We'll verify here if the previous and next</span><span class="pln">
+        </span><span class="com">// buttons are meant to be clickable.</span><span class="pln">
+        </span><span class="kwd">var</span><span class="pln"> previousButton </span><span class="pun">=</span><span class="pln"> previousPage </span><span class="pun">?</span><span class="pln"> </span><span class="str">'data-grid-page="'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> previousPage </span><span class="pun">+</span><span class="pln"> </span><span class="str">'"'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">'disabled'</span><span class="pun">;</span><span class="pln">
+        </span><span class="kwd">var</span><span class="pln"> nextButton </span><span class="pun">=</span><span class="pln"> nextPage </span><span class="pun">?</span><span class="pln"> </span><span class="str">'data-grid-page="'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> nextPage </span><span class="pun">+</span><span class="pln"> </span><span class="str">'"'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">'disabled'</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">%&gt;</span><span class="pln">
+
+    </span><span class="pun">&lt;</span><span class="pln">nav</span><span class="pun">&gt;</span><span class="pln">
+        </span><span class="pun">&lt;%-</span><span class="pln"> pagination</span><span class="pun">.</span><span class="pln">pageStart </span><span class="pun">%&gt;</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> </span><span class="pun">&lt;%-</span><span class="pln"> pagination</span><span class="pun">.</span><span class="pln">pageLimit </span><span class="pun">%&gt;</span><span class="pln"> of </span><span class="pun">&lt;%-</span><span class="pln"> pagination</span><span class="pun">.</span><span class="pln">filtered </span><span class="pun">%&gt;</span><span class="pln">
+
+        </span><span class="pun">&lt;</span><span class="pln">button </span><span class="pun">&lt;%=</span><span class="pln"> previousButton </span><span class="pun">%&gt;&gt;</span><span class="pln">
+            </span><span class="pun">&lt;</span><span class="pln">i </span><span class="kwd">class</span><span class="pun">=</span><span class="str">"material-icons"</span><span class="pun">&gt;</span><span class="pln">chevron_left</span><span class="pun">&lt;</span><span class="str">/i&gt;
+        &lt;/</span><span class="pln">button</span><span class="pun">&gt;</span><span class="pln">
+
+        </span><span class="pun">&lt;</span><span class="pln">button </span><span class="pun">&lt;%=</span><span class="pln"> nextButton </span><span class="pun">%&gt;&gt;</span><span class="pln">
+            </span><span class="pun">&lt;</span><span class="pln">i </span><span class="kwd">class</span><span class="pun">=</span><span class="str">"material-icons"</span><span class="pun">&gt;</span><span class="pln">chevron_right</span><span class="pun">&lt;</span><span class="str">/i&gt;
+        &lt;/</span><span class="pln">button</span><span class="pun">&gt;</span><span class="pln">
+    </span><span class="pun">&lt;</span><span class="str">/nav&gt;
+
+&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></code></pre>
+
+<p><strong>Infinite Pagination template</strong></p>
+
+<pre class="prettyprint lang-js"><code><span class="pun">&lt;</span><span class="pln">script type</span><span class="pun">=</span><span class="str">"text/template"</span><span class="pln"> data</span><span class="pun">-</span><span class="pln">grid</span><span class="pun">=</span><span class="str">"main"</span><span class="pln"> data</span><span class="pun">-</span><span class="pln">grid</span><span class="pun">-</span><span class="pln">template</span><span class="pun">=</span><span class="str">"pagination"</span><span class="pun">&gt;</span><span class="pln">
+
+    </span><span class="pun">&lt;%</span><span class="pln">
+        </span><span class="com">// We'll verify if the load more button can be triggered or</span><span class="pln">
+        </span><span class="com">// not, depending if we have more results to be loaded.</span><span class="pln">
+        </span><span class="kwd">var</span><span class="pln"> loadMore </span><span class="pun">=</span><span class="pln"> pagination </span><span class="pun">?</span><span class="pln"> </span><span class="str">'data-grid-page="'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pagination</span><span class="pun">.</span><span class="pln">page </span><span class="pun">+</span><span class="pln"> </span><span class="str">'"'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">'disabled'</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">%&gt;</span><span class="pln">
+
+    </span><span class="pun">&lt;</span><span class="pln">button </span><span class="pun">&lt;%=</span><span class="pln"> loadMore </span><span class="pun">%&gt;&gt;</span><span class="pln">
+        </span><span class="typ">Load</span><span class="pln"> </span><span class="typ">More</span><span class="pln">
+    </span><span class="pun">&lt;</span><span class="str">/button&gt;
+
+&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></code></pre>
+
+<p>Because we're setting the same <code>data-grid</code> attribute, the plugin will know to group it with your results container. We use the <code>pagination</code> data attribute to indicate it as the pagination container.</p>
+
+<p>As for the other attributes, the <code>data-grid-page</code> attribute is where we store the current page. By default we will use <code>page_start</code> and <code>page_limit</code> in our pagination template to indicate which results are displayed on each page. This would output to 1 - 10, 11 - 20, ...</p>
+
+<p><strong>Filters container</strong></p>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">data-grid-layout</span><span class="pun">=</span><span class="atv">"filters"</span><span class="pln"> </span><span class="atn">data-grid</span><span class="pun">=</span><span class="atv">"main"</span><span class="tag">&gt;&lt;/ul&gt;</span></code></pre>
+
+<p><strong>Filters template</strong></p>
+
+<pre class="prettyprint lang-js"><code><span class="pun">&lt;</span><span class="pln">script type</span><span class="pun">=</span><span class="str">"text/template"</span><span class="pln"> data</span><span class="pun">-</span><span class="pln">grid</span><span class="pun">=</span><span class="str">"main"</span><span class="pln"> data</span><span class="pun">-</span><span class="pln">grid</span><span class="pun">-</span><span class="pln">template</span><span class="pun">=</span><span class="str">"filters"</span><span class="pun">&gt;</span><span class="pln">
+
+    </span><span class="pun">&lt;%</span><span class="pln"> </span><span class="kwd">var</span><span class="pln"> filters </span><span class="pun">=</span><span class="pln"> _</span><span class="pun">.</span><span class="pln">reject</span><span class="pun">(</span><span class="pln">grid</span><span class="pun">.</span><span class="pln">applied_filters</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">f</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="kwd">return</span><span class="pln"> f</span><span class="pun">.</span><span class="pln">type </span><span class="pun">===</span><span class="pln"> </span><span class="str">'live'</span><span class="pun">;});</span><span class="pln"> </span><span class="pun">%&gt;</span><span class="pln">
+
+    </span><span class="pun">&lt;%</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">_</span><span class="pun">.</span><span class="pln">isEmpty</span><span class="pun">(</span><span class="pln">filters</span><span class="pun">))</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">%&gt;</span><span class="pln">
+        </span><span class="pun">&lt;</span><span class="pln">i</span><span class="pun">&gt;</span><span class="typ">There</span><span class="pln"> are no filters applied</span><span class="pun">.&lt;/</span><span class="pln">i</span><span class="pun">&gt;</span><span class="pln">
+    </span><span class="pun">&lt;%</span><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">%&gt;</span><span class="pln">
+
+        </span><span class="pun">&lt;%</span><span class="pln"> _</span><span class="pun">.</span><span class="pln">each</span><span class="pun">(</span><span class="pln">filters</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">f</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">%&gt;</span><span class="pln">
+
+            </span><span class="pun">&lt;</span><span class="pln">li</span><span class="pun">&gt;</span><span class="pln">
+                </span><span class="pun">&lt;%</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">f</span><span class="pun">.</span><span class="pln">query</span><span class="pun">.</span><span class="pln">column </span><span class="pun">===</span><span class="pln"> </span><span class="str">'all'</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">%&gt;</span><span class="pln">
+
+                    </span><span class="pun">&lt;%=</span><span class="pln"> f</span><span class="pun">.</span><span class="pln">query</span><span class="pun">.</span><span class="pln">value </span><span class="pun">%&gt;</span><span class="pln">
+
+                </span><span class="pun">&lt;%</span><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">%&gt;</span><span class="pln">
+
+                    </span><span class="pun">&lt;%=</span><span class="pln"> r</span><span class="pun">.</span><span class="pln">query</span><span class="pun">.</span><span class="pln">value </span><span class="pun">%&gt;</span><span class="pln"> in </span><span class="pun">&lt;%=</span><span class="pln"> f</span><span class="pun">.</span><span class="pln">query</span><span class="pun">.</span><span class="pln">column </span><span class="pun">%&gt;</span><span class="pln">
+
+                </span><span class="pun">&lt;%</span><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="pun">%&gt;</span><span class="pln">
+            </span><span class="pun">&lt;</span><span class="str">/li&gt;
+
+        &lt;% }); %&gt;
+    &lt;% } %&gt;
+
+&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></code></pre>
+
+<p>We check for columns so you can display your filters in a readable manner. If your filter isn't filtering within a column it will just display the filter. If your filtering within a column we show both the filter and column.</p>
+
+<h4 id="the-javascript"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#the-javascript"><i class="fa fa-link"></i></a>The Javascript</h4>
+
+<p>Now that you have all of your templates setup, let's instantiate Data Grid. The first argument within the instantiation is the grid, this is the value of the <code>data-grid</code> attribute. This allows us you to have a flexible layout, and multiple Data Grids on a page. Next is the results container for the response, followed by the pagination container and finally the applied filters container.</p>
+
+<pre class="prettyprint lang-js"><code><span class="pln">$</span><span class="pun">.</span><span class="pln">datagrid</span><span class="pun">(</span><span class="pln">grid</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">)</span></code></pre>
+
+<pre class="prettyprint lang-js"><code><span class="pun">&lt;</span><span class="pln">script</span><span class="pun">&gt;</span><span class="pln">
+
+    $</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        $</span><span class="pun">.</span><span class="pln">datagrid</span><span class="pun">(</span><span class="str">'main'</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">});</span><span class="pln">
+
+</span><span class="pun">&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></code></pre>
+
+<p>After applying the plugin, you should get a nicely filled table with all of your data and pagination.</p>
+
+<div name="filters" data-unique="filters"></div><h3>Filters</h3>
+
+<p>Lets go over how to set filters now that you have your Data Grid returning results. We use the <code>data-grid-filter</code> attribute to define filter name. The name will be used as filter's handle.</p>
+
+<blockquote>
+<p><strong>Note:</strong> Filters can be set on any html element on your page.</p>
+</blockquote>
+
+<h4 id="term-filters"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#term-filters"><i class="fa fa-link"></i></a>Term filters</h4>
+
+<p>Regular filters can be added on elements using a <code>column:value</code> pair</p>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">data-grid-filter</span><span class="pun">=</span><span class="atv">"us"</span><span class="pln"> </span><span class="atn">data-grid-query</span><span class="pun">=</span><span class="atv">"all:USA"</span><span class="pln"> </span><span class="atn">data-grid</span><span class="pun">=</span><span class="atv">"main"</span><span class="tag">&gt;</span><span class="pln">Filter USA</span><span class="tag">&lt;/button&gt;</span></code></pre>
+
+<p>In case you need multiple criterias, use <code>column1:value1; column2:value2; column3:operator:value3</code>.</p>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">data-grid-filter</span><span class="pun">=</span><span class="atv">"us2"</span><span class="pln"> </span><span class="atn">data-grid-query</span><span class="pun">=</span><span class="atv">"all:USA; state:California;"</span><span class="pln"> </span><span class="atn">data-grid</span><span class="pun">=</span><span class="atv">"main"</span><span class="tag">&gt;</span><span class="pln">Filter USA</span><span class="tag">&lt;/button&gt;</span></code></pre>
+
+<h4 id="range-filters"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#range-filters"><i class="fa fa-link"></i></a>Range filters</h4>
+
+<h6 id="datepicker"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#datepicker"><i class="fa fa-lightbulb-o"></i></a>Datepicker</h6>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-group datePicker"</span><span class="pln">
+             </span><span class="atn">data-grid</span><span class="pun">=</span><span class="atv">"standard"</span><span class="pln">
+             </span><span class="atn">data-grid-filter</span><span class="pun">=</span><span class="atv">"created"</span><span class="pln">
+             </span><span class="atn">data-grid-type</span><span class="pun">=</span><span class="atv">"range"</span><span class="pln">
+             </span><span class="atn">data-grid-query</span><span class="pun">=</span><span class="atv">"created:01 Jun, 2015"</span><span class="pln">
+             </span><span class="atn">data-grid-range</span><span class="pun">=</span><span class="atv">"start"</span><span class="pln">
+             </span><span class="atn">data-grid-date-format</span><span class="pun">=</span><span class="atv">"DD MMM, YYYY"</span><span class="pln">
+             </span><span class="atn">data-grid-label</span><span class="pun">=</span><span class="atv">"Created At"</span><span class="tag">&gt;</span><span class="pln">
+
+     </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">data-format</span><span class="pun">=</span><span class="atv">"DD MMM, YYYY"</span><span class="pln"> </span><span class="atn">disabled</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"form-control"</span><span class="pln"> </span><span class="atn">placeholder</span><span class="pun">=</span><span class="atv">"Start Date"</span><span class="tag">&gt;</span><span class="pln">
+
+     </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-group-addon"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">cursor</span><span class="pun">:</span><span class="pln"> pointer</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-calendar"</span><span class="tag">&gt;&lt;/i&gt;&lt;/span&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;/div&gt;</span></code></pre>
+
+<p>Optionally specify date format <code>data-grid-date-format=":format"</code> (empty attribute defaults to <code>yyyy-mm-dd</code>). If <code>data-grid-date-format</code> attribute is not provided, values won't be treated as date range (i.e. passed as is).</p>
+
+<h6 id="slider"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#slider"><i class="fa fa-lightbulb-o"></i></a>Slider</h6>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"populationSlider"</span><span class="pln">
+     </span><span class="atn">data-grid</span><span class="pun">=</span><span class="atv">"standard"</span><span class="pln">
+     </span><span class="atn">data-grid-filter</span><span class="pun">=</span><span class="atv">"population"</span><span class="pln">
+     </span><span class="atn">data-grid-type</span><span class="pun">=</span><span class="atv">"range"</span><span class="pln">
+     </span><span class="atn">data-grid-query</span><span class="pun">=</span><span class="atv">"population:0:1000000"</span><span class="pln">
+     </span><span class="atn">data-grid-label</span><span class="pun">=</span><span class="atv">"Population"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></code></pre>
+
+<p>In order to trigger slider changes, developer should add the following code:</p>
+
+<pre class="prettyprint lang-js"><code><span class="pln">$</span><span class="pun">(</span><span class="str">'.populationSlider'</span><span class="pun">).</span><span class="pln">noUiSlider</span><span class="pun">(</span><span class="pln">options</span><span class="pun">).</span><span class="pln">on</span><span class="pun">(</span><span class="str">'change'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> range </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">val</span><span class="pun">();</span><span class="pln">
+    $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">data</span><span class="pun">(</span><span class="str">'grid-query'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="str">'population'</span><span class="pun">,</span><span class="pln"> </span><span class="str">':'</span><span class="pun">,</span><span class="pln"> range</span><span class="pun">[</span><span class="lit">0</span><span class="pun">],</span><span class="pln"> </span><span class="str">':'</span><span class="pun">,</span><span class="pln"> range</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]].</span><span class="pln">join</span><span class="pun">(</span><span class="str">''</span><span class="pun">));</span><span class="pln">
+</span><span class="pun">});</span></code></pre>
+
+<h6 id="behaviour-for-data-grid-query"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#behaviour-for-data-grid-query"><i class="fa fa-lightbulb-o"></i></a>Behaviour for data-grid-query</h6>
+
+<p><code>data-grid-query</code> can contain several kinds of data:</p>
+
+<ul>
+<li>data-grid-query="column:start:end" - When change event is triggered, our query will be parsed and in case <code>start</code> and <code>end</code> is not undefined, those will be default values for our range. For this to happen, developer should omit <code>data-grid-range="start|end"</code> param or leave it empty, otherwise data-grid will assume that our filter consists of multiple range controls.</li>
+<li><code>data-grid-query="column:start"</code> and <code>data-grid-query="column:end"</code> followed respectively by <code>data-grid-range="start"</code> and <code>data-grid-range="end"</code> on their controls. In this case data grid will use start/end values from query param as defaults.</li>
+</ul>
+
+<p>In case our control is not a form field element (input/select), as in our datepicker example, data-grid will try to find form fields in the control and get the value from it, or fallback to our defaults.</p>
+
+<div name="filter-types" data-unique="filter-types"></div><h3>Filter types</h3>
+
+<p>Filter types determine how data-grid interacts with the filters you send it. There are 2 main filter types available out of the box.</p>
+
+<ul>
+<li>term: column:operator:value (default)</li>
+<li>range: :start, :end</li>
+</ul>
+
+<h4 id="group-filters"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#group-filters"><i class="fa fa-link"></i></a>Group filters</h4>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;select</span><span class="pln"> </span><span class="atn">data-grid-group</span><span class="pun">=</span><span class="atv">"country"</span><span class="pln"> </span><span class="atn">data-grid-reset-group</span><span class="pln"> </span><span class="atn">data-grid</span><span class="pun">=</span><span class="atv">"foo"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;option</span><span class="pln"> </span><span class="atn">data-grid-reset-group</span><span class="pun">=</span><span class="atv">"some_other_group"</span><span class="pln"> </span><span class="atn">data-grid-reset-filter</span><span class="pun">=</span><span class="atv">"some_other_filter"</span><span class="tag">&gt;</span><span class="pln">All</span><span class="tag">&lt;/option&gt;</span><span class="pln">
+    </span><span class="tag">&lt;option</span><span class="pln"> </span><span class="atn">data-grid-filter</span><span class="pun">=</span><span class="atv">"germany"</span><span class="pln"> </span><span class="atn">data-grid-query</span><span class="pun">=</span><span class="atv">"country:germany"</span><span class="tag">&gt;</span><span class="pln">Germany</span><span class="tag">&lt;/option&gt;</span><span class="pln">
+    </span><span class="tag">&lt;option</span><span class="pln"> </span><span class="atn">data-grid-filter</span><span class="pun">=</span><span class="atv">"france"</span><span class="pln"> </span><span class="atn">data-grid-query</span><span class="pun">=</span><span class="atv">"country:france"</span><span class="tag">&gt;</span><span class="pln">France</span><span class="tag">&lt;/option&gt;</span><span class="pln">
+    </span><span class="tag">&lt;option</span><span class="pln"> </span><span class="atn">data-grid-filter</span><span class="pun">=</span><span class="atv">"sweeden-norway-finland"</span><span class="pln"> </span><span class="atn">data-grid-query</span><span class="pun">=</span><span class="atv">"country:sweden, norway, finland"</span><span class="tag">&gt;</span><span class="pln">Scandinavia</span><span class="tag">&lt;/option&gt;</span><span class="pln">
+</span><span class="tag">&lt;/select&gt;</span></code></pre>
+
+<p>In this setup when user changes select from 'France' to 'Scandinavia', data-grid will reset the applied filter within the group and apply the new one - Scandinavia.</p>
+
+<p>In addition to that if user clicks <code>All</code>, along with reseting the group data-grid will also reset filters <code>some_other_group</code> and <code>some_other_filter</code>.</p>
+
+<blockquote>
+<p><strong>Note:</strong> <code>data-grid-group</code> must be present for any select element that should apply filtering.</p>
+</blockquote>
+
+<h4 id="search"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#search"><i class="fa fa-link"></i></a>Search</h4>
+
+<p>Data Grid ships with a few other things to help developers get off the ground faster. If you are looking to search within your data set, all you need to do is create a form and set the <code>data-grid</code> attribute and set <code>data-grid-search</code>. Make sure the input name is set to filter.</p>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;form</span><span class="pln"> </span><span class="atn">method</span><span class="pun">=</span><span class="atv">"post"</span><span class="pln"> </span><span class="atn">action</span><span class="pun">=</span><span class="atv">""</span><span class="pln"> </span><span class="atn">accept-charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">data-grid-search</span><span class="pln"> </span><span class="atn">data-grid</span><span class="pun">=</span><span class="atv">"main"</span><span class="tag">&gt;</span><span class="pln">
+
+    </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"filter"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">placeholder</span><span class="pun">=</span><span class="atv">"Filter All"</span><span class="tag">&gt;</span><span class="pln">
+
+    </span><span class="tag">&lt;button&gt;</span><span class="pln">Add Filter</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;/form&gt;</span></code></pre>
+
+<p>Now if you are looking for to let users filter within defined columns all you need to do is add a select menu within the form. The select name should be set to 'column' and the value of options set to the column name.</p>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;form</span><span class="pln"> </span><span class="atn">method</span><span class="pun">=</span><span class="atv">"post"</span><span class="pln"> </span><span class="atn">action</span><span class="pun">=</span><span class="atv">""</span><span class="pln"> </span><span class="atn">accept-charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">data-grid-search</span><span class="pln"> </span><span class="atn">data-grid</span><span class="pun">=</span><span class="atv">"main"</span><span class="tag">&gt;</span><span class="pln">
+
+    </span><span class="tag">&lt;select</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"column"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-medium"</span><span class="tag">&gt;</span><span class="pln">
+
+        </span><span class="tag">&lt;option</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"all"</span><span class="tag">&gt;</span><span class="pln">All</span><span class="tag">&lt;/option&gt;</span><span class="pln">
+        </span><span class="tag">&lt;option</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"city"</span><span class="tag">&gt;</span><span class="pln">city</span><span class="tag">&lt;/option&gt;</span><span class="pln">
+        </span><span class="tag">&lt;option</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"population"</span><span class="tag">&gt;</span><span class="pln">Population</span><span class="tag">&lt;/option&gt;</span><span class="pln">
+
+    </span><span class="tag">&lt;/select&gt;</span><span class="pln">
+
+    </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"filter"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">placeholder</span><span class="pun">=</span><span class="atv">"Filter All"</span><span class="tag">&gt;</span><span class="pln">
+
+    </span><span class="tag">&lt;button&gt;</span><span class="pln">Add Filter</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;/form&gt;</span></code></pre>
+
+<blockquote>
+<p><strong>Note:</strong> You can enforce strict equality on the search form using <code>data-operator="="</code> on the <code>form</code> element.</p>
+</blockquote>
+
+<div name="filter-presets" data-unique="filter-presets"></div><h3>Filter presets</h3>
+
+<p>Filter presets allows to use your predefined filters.</p>
+
+<h5>Syntax</h5>
+
+<pre class="prettyprint lang-js"><code><span class="pln">$</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// Setup DataGrid</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> grid </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">.</span><span class="pln">datagrid</span><span class="pun">(</span><span class="str">'standard'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        filters</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">'mexico_large'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                type</span><span class="pun">:</span><span class="pln"> </span><span class="str">'term'</span><span class="pun">,</span><span class="pln"> </span><span class="com">// Can be omitted as it's the default value</span><span class="pln">
+                label</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Large Mexico cities'</span><span class="pun">,</span><span class="pln">
+                </span><span class="kwd">default</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln"> </span><span class="com">// Make this a default filter or not. Can be omitted.</span><span class="pln">
+                query</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                    </span><span class="pun">{</span><span class="pln">
+                        column</span><span class="pun">:</span><span class="pln"> </span><span class="str">'country'</span><span class="pun">,</span><span class="pln">
+                        value</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Mexico'</span><span class="pun">,</span><span class="pln">
+                        </span><span class="kwd">operator</span><span class="pun">:</span><span class="pln"> </span><span class="str">'='</span><span class="pln"> </span><span class="com">// Can be omitted as it's the default value</span><span class="pln">
+                    </span><span class="pun">},</span><span class="pln">
+                    </span><span class="pun">{</span><span class="pln">
+                        column</span><span class="pun">:</span><span class="pln"> </span><span class="str">'population'</span><span class="pun">,</span><span class="pln">
+                        value</span><span class="pun">:</span><span class="pln"> </span><span class="str">'100000'</span><span class="pun">,</span><span class="pln">
+                        </span><span class="kwd">operator</span><span class="pun">:</span><span class="pln"> </span><span class="str">'&gt;='</span><span class="pln">
+                    </span><span class="pun">}</span><span class="pln">
+                </span><span class="pun">]</span><span class="pln">
+            </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">});</span></code></pre>
+
+<h5>Markup</h5>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">data-grid-filter</span><span class="pun">=</span><span class="atv">"mexico_large"</span><span class="tag">&gt;</span><span class="pln">Large mexican cities</span><span class="tag">&lt;/button&gt;</span></code></pre>
+
+<p><code>data-grid-label</code> and <code>data-grid-filter-default</code> attributes can be set up in markup, but config values will prevail.</p>
+
+<h4 id="filter-by-relations"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#filter-by-relations"><i class="fa fa-link"></i></a>Filter by relations</h4>
+
+<p>Data grid supports filtering by eloquent relations. A filter by relation is applied using the form <code>"column..table:value"</code></p>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"dropdown-menu"</span><span class="pln"> </span><span class="atn">role</span><span class="pun">=</span><span class="atv">"tags"</span><span class="tag">&gt;</span><span class="pln">
+    @foreach ($tags as $tag)
+    </span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">data-grid-filter</span><span class="pun">=</span><span class="atv">"tag:{{{ $tag }}}"</span><span class="pln"> </span><span class="atn">data-grid-query</span><span class="pun">=</span><span class="atv">"tags..name:{{{ $tag }}}"</span><span class="pln"> </span><span class="atn">data-grid-label</span><span class="pun">=</span><span class="atv">"{{{ $tag }}}"</span><span class="tag">&gt;</span><span class="pln">{{{ $tag }}}</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span><span class="pln">
+    @endforeach
+</span><span class="tag">&lt;/ul&gt;</span></code></pre>
+
+<blockquote>
+<p><strong>Note:</strong> When you filter by a relation a whereHas call is invoked on the DatabaseHandler which performs a regular array search on the collection handler.</p>
+</blockquote>
+
+<h4 id="other-filter-options"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#other-filter-options"><i class="fa fa-link"></i></a>Other filter options</h4>
+
+<h5>Grouping filters under one <code>data-grid</code> attribute</h5>
+
+<p>You can omit the <code>data-grid</code> attribute from filter elements if the parent element already has it set.</p>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-grid</span><span class="pun">=</span><span class="atv">"main"</span><span class="tag">&gt;</span><span class="pln">
+
+    </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">data-grid-filter</span><span class="pun">=</span><span class="atv">"us"</span><span class="pln"> </span><span class="atn">data-grid-query</span><span class="pun">=</span><span class="atv">"country:us"</span><span class="tag">&gt;</span><span class="pln">United States of America</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+    </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">data-grid-filter</span><span class="pun">=</span><span class="atv">"ca"</span><span class="pln"> </span><span class="atn">data-grid-query</span><span class="pun">=</span><span class="atv">"country:ca"</span><span class="tag">&gt;</span><span class="pln">Canada</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+    </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">data-grid-filter</span><span class="pun">=</span><span class="atv">"uk"</span><span class="pln"> </span><span class="atn">data-grid-query</span><span class="pun">=</span><span class="atv">"country:uk"</span><span class="tag">&gt;</span><span class="pln">United Kingdom</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;/div&gt;</span></code></pre>
+
+<div name="reset" data-unique="reset"></div><h3>Reset</h3>
+
+<ul>
+<li><code>data-grid-reset</code> - clears all filters.</li>
+<li><code>data-grid-reset-group=":name"</code> - resets all filters within a group. (<code>:name</code> optional)</li>
+<li><code>data-grid-reset-filter=":name"</code> - resets single filter. (<code>:name</code> optional)</li>
+</ul>
+
+<p>If you want to give your users a simple way to reset Data Grid, just create a button, set the attributes <code>data-grid</code>  and <code>data-reset</code> and you're done.</p>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">data-grid-reset</span><span class="pln"> </span><span class="atn">data-grid</span><span class="pun">=</span><span class="atv">"main"</span><span class="tag">&gt;</span><span class="pln">Reset</span><span class="tag">&lt;/button&gt;</span></code></pre>
+
+<h5>Reset all other filters</h5>
+
+<p>You can add a <code>data-grid-reset</code> attribute to any filter element to force clearing other filters before applying the current filter.</p>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">data</span><span class="pun">=</span><span class="atv">grid-filter="us"</span><span class="pln"> </span><span class="atn">data-grid-query</span><span class="pun">=</span><span class="atv">"country:us"</span><span class="pln"> </span><span class="atn">data-grid-reset</span><span class="pln"> </span><span class="atn">data-grid</span><span class="pun">=</span><span class="atv">"main"</span><span class="tag">&gt;</span><span class="pln">USA</span><span class="tag">&lt;/button&gt;</span></code></pre>
+
+<p>This will clear any already applied filters before applying the us filter.</p>
+
+<h5>Reset filters based on a group</h5>
+
+<p>You can add a <code>data-grid-reset-group</code> attribute on a parent element of all filters you want cleared, it acts as grouped filters that force clear all filters belogning to this group before applying a new one.</p>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-grid</span><span class="pun">=</span><span class="atv">"main"</span><span class="pln"> </span><span class="atn">data-grid-group</span><span class="pun">=</span><span class="atv">"ids"</span><span class="pln"> </span><span class="atn">data-grid-reset-group</span><span class="tag">&gt;</span><span class="pln">
+
+    </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">data-grid-filter</span><span class="pun">=</span><span class="atv">"id1"</span><span class="pln"> </span><span class="atn">data-grid-query</span><span class="pun">=</span><span class="atv">"id:1"</span><span class="tag">&gt;</span><span class="pln">ID 1</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+    </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">data-grid-filter</span><span class="pun">=</span><span class="atv">"id2"</span><span class="pln"> </span><span class="atn">data-grid-query</span><span class="pun">=</span><span class="atv">"id:2"</span><span class="tag">&gt;</span><span class="pln">ID 2</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+    </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">data-grid-filter</span><span class="pun">=</span><span class="atv">"id3"</span><span class="pln"> </span><span class="atn">data-grid-query</span><span class="pun">=</span><span class="atv">"id:3"</span><span class="tag">&gt;</span><span class="pln">ID 3</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;/div&gt;</span></code></pre>
+
+<p>This will clear only filters that are part of this group while leaving other filters untouched.</p>
+
+<div name="sorts" data-unique="sorts"></div><h3>Sorts</h3>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">data-grid-sort</span><span class="pun">=</span><span class="atv">"city:asc"</span><span class="pln"> </span><span class="atn">data-grid</span><span class="pun">=</span><span class="atv">"main"</span><span class="tag">&gt;</span><span class="pln">Sort By City ASC</span><span class="tag">&lt;/a&gt;</span></code></pre>
+
+<p>This will sort the data grid by city in a ascending order.</p>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">data-grid-sort</span><span class="pun">=</span><span class="atv">"city:desc"</span><span class="pln"> </span><span class="atn">data-grid</span><span class="pun">=</span><span class="atv">"main"</span><span class="tag">&gt;</span><span class="pln">Sort By City DESC</span><span class="tag">&lt;/a&gt;</span></code></pre>
+
+<p>This will sort the data grid by city in a descending order.</p>
+
+<h4 id="multi-column-sort"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#multi-column-sort"><i class="fa fa-link"></i></a>Multi-column sort</h4>
+
+<p>You can sort you results by multiple columns by clicking a column with holding down the Shift key.<br>
+This feature can be disabled by setting <code>sorting.multisort</code> to false.</p>
+
+<h4 id="set-sort-on-filter"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#set-sort-on-filter"><i class="fa fa-link"></i></a>Set sort on filter</h4>
+
+<p>Additionally you can set you sorts on a filter. This way when user clicks the filter, it will set up your sort.</p>
+
+<pre class="prettyprint lang-html"><code><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">data-grid</span><span class="pun">=</span><span class="atv">"main"</span><span class="pln"> </span><span class="atn">data-grid-filter</span><span class="pun">=</span><span class="atv">"us"</span><span class="pln"> </span><span class="atn">data-grid-query</span><span class="pun">=</span><span class="atv">"country:us"</span><span class="pln"> </span><span class="atn">data-grid-sort</span><span class="pun">=</span><span class="atv">"subdivision:asc; population:desc"</span><span class="tag">&gt;</span><span class="pln">US</span><span class="tag">&lt;/a&gt;</span></code></pre>
+
+<div name="labels" data-unique="labels"></div><h3>Labels</h3>
+
+<p>From time to time, when using filters and sorts you will run into issues when your column names have underscores or something of that nature. Because of this we've created the data-grid-label attribute to help you rewrite this to achieve a better user experience. The <code>data-grid-label</code> should contain the label you want to use for applied filter.</p>
+
+<pre class="prettyprint lang-html"><code><span class="pln">&lt;a href="#" data-grid-filter="us-washington" data-grid-query="country:us; subdivision:washington; population:&lt;:5000" data-grid-label="Small cities in Washington"&gt;Washington, United States &lt; 5000</span><span class="tag">&lt;/a&gt;</span></code></pre>
+
+<div name="options" data-unique="options"></div><h3>Options</h3>
+
+<p>You can specify plugin options by adding a second object parameter to your plugin instantiation.</p>
+
+<pre class="prettyprint lang-js"><code><span class="pun">&lt;</span><span class="pln">script</span><span class="pun">&gt;</span><span class="pln">
+    $</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        $</span><span class="pun">.</span><span class="pln">datagrid</span><span class="pun">(</span><span class="str">'main'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            source</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://example.com/api/v1'</span><span class="pun">,</span><span class="pln">
+            sort</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                column</span><span class="pun">:</span><span class="pln"> </span><span class="str">'city'</span><span class="pun">,</span><span class="pln">
+                direction</span><span class="pun">:</span><span class="pln"> </span><span class="str">'desc'</span><span class="pln">
+            </span><span class="pun">},</span><span class="pln">
+            </span><span class="pun">...</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+    </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></code></pre>
+
+<p>Available options with defaults:</p>
+
+<pre class="prettyprint lang-js"><code><span class="pun">{</span><span class="pln">
+    source</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">
+
+    pagination</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        method</span><span class="pun">:</span><span class="pln"> </span><span class="str">'single'</span><span class="pun">,</span><span class="pln">
+        threshold</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">
+        throttle</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">
+        scroll</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">
+        infiniteScroll</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+        scrollOffset</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">undefined</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+
+    cssClasses</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        ascClass</span><span class="pun">:</span><span class="pln"> </span><span class="str">'asc'</span><span class="pun">,</span><span class="pln">
+        descClass</span><span class="pun">:</span><span class="pln"> </span><span class="str">'desc'</span><span class="pun">,</span><span class="pln">
+        appliedFilter</span><span class="pun">:</span><span class="pln"> </span><span class="str">'selected'</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+
+    sorting</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        column</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">undefined</span><span class="pun">,</span><span class="pln">
+        direction</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">undefined</span><span class="pun">,</span><span class="pln">
+        multicolumn</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+        delimiter</span><span class="pun">:</span><span class="pln"> </span><span class="str">','</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+
+    delimiter</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        query</span><span class="pun">:</span><span class="pln"> </span><span class="str">';'</span><span class="pun">,</span><span class="pln">
+        expression</span><span class="pun">:</span><span class="pln"> </span><span class="str">':'</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+
+    templateSettings</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        evaluate</span><span class="pun">:</span><span class="pln"> </span><span class="str">/&lt;%([\s\S]+?)%&gt;/</span><span class="pln">g</span><span class="pun">,</span><span class="pln">
+        interpolate</span><span class="pun">:</span><span class="pln"> </span><span class="str">/&lt;%=([\s\S]+?)%&gt;/</span><span class="pln">g</span><span class="pun">,</span><span class="pln">
+        escape</span><span class="pun">:</span><span class="pln"> </span><span class="str">/&lt;%-([\s\S]+?)%&gt;/</span><span class="pln">g</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+
+    filters</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{},</span><span class="pln">
+
+    search</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        live</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+        timeout</span><span class="pun">:</span><span class="pln"> </span><span class="lit">600</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+
+    url</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        hash</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+        semantic</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+        base</span><span class="pun">:</span><span class="pln"> </span><span class="str">''</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+
+    loader</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        element</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">undefined</span><span class="pun">,</span><span class="pln">
+        showEffect</span><span class="pun">:</span><span class="pln"> </span><span class="str">'fadeIn'</span><span class="pun">,</span><span class="pln">
+        hideEffect</span><span class="pun">:</span><span class="pln"> </span><span class="str">'fadeOut'</span><span class="pun">,</span><span class="pln">
+        duration</span><span class="pun">:</span><span class="pln"> </span><span class="lit">200</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+
+    formats</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        timestamp</span><span class="pun">:</span><span class="pln"> </span><span class="str">'YYYY-MM-DD HH:mm:ss'</span><span class="pun">,</span><span class="pln">
+        serverDate</span><span class="pun">:</span><span class="pln"> </span><span class="str">'YYYY-MM-DD'</span><span class="pun">,</span><span class="pln">
+        clientDate</span><span class="pun">:</span><span class="pln"> </span><span class="str">'MMM DD, YYYY'</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+
+    callback</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">undefined</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>Below is a list with all of the available options.</p>
+
+<h4 id="general-options"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#general-options"><i class="fa fa-link"></i></a>General options</h4>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>source</td>
+<td>string</td>
+<td>The API endpoint URI.</td>
+</tr>
+<tr>
+<td><a href="https://cartalyst.com/manual/data-grid/5.x#pagination-options">pagination</a></td>
+<td>object</td>
+<td>The pagination settings</td>
+</tr>
+<tr>
+<td><a href="https://cartalyst.com/manual/data-grid/5.x#css-classes">cssClasses</a></td>
+<td>object</td>
+<td>The css classes used for asc/desc sorts and applied filters.</td>
+</tr>
+<tr>
+<td><a href="https://cartalyst.com/manual/data-grid/5.x#sorting-options">sorting</a></td>
+<td>object</td>
+<td>The sort settings.</td>
+</tr>
+<tr>
+<td><a href="https://cartalyst.com/manual/data-grid/5.x#delimiter-options">delimiter</a></td>
+<td>object</td>
+<td>Delimiter settings.</td>
+</tr>
+<tr>
+<td>layouts</td>
+<td>object</td>
+<td>Layout settings.</td>
+</tr>
+<tr>
+<td>templateSettings</td>
+<td>object</td>
+<td>Changes the surrounding braces. Data Grid's default is set to &lt;% ... %&gt;.</td>
+</tr>
+<tr>
+<td>filters</td>
+<td>object</td>
+<td>Filter presets.</td>
+</tr>
+<tr>
+<td><a href="https://cartalyst.com/manual/data-grid/5.x#search-options">search</a></td>
+<td>object</td>
+<td>Set the threshold for the live search feature. (Time after last keystroke before search starts)</td>
+</tr>
+<tr>
+<td><a href="https://cartalyst.com/manual/data-grid/5.x#url-options">hash</a></td>
+<td>object</td>
+<td>URL options.</td>
+</tr>
+<tr>
+<td><a href="https://cartalyst.com/manual/data-grid/5.x#loader-options">loader</a></td>
+<td>object</td>
+<td>Settings for the loader shown while the ajax request is made.</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>function</td>
+<td>This parameter you can pass a function that will run every time a filter is added, or a sort is applied. This function receives one argument, and gives you access most values within Data Grid.</td>
+</tr>
+<tr>
+<td><a href="https://cartalyst.com/manual/data-grid/5.x#events">events</a></td>
+<td>object</td>
+<td>This parameter you can pass an object with events and functions to run custom logic after specific actions are called.</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="pagination-options"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#pagination-options"><i class="fa fa-link"></i></a>Pagination options</h4>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>method</td>
+<td>string</td>
+<td>The pagination method, accepts <code>single</code>, <code>group</code> or <code>infinite</code>.</td>
+</tr>
+<tr>
+<td>threshold</td>
+<td>integer</td>
+<td>Minimum amount of results before pagination is applied.</td>
+</tr>
+<tr>
+<td>throttle</td>
+<td>integer</td>
+<td>The maximum amount of results on a single page. Overrides dividend.</td>
+</tr>
+<tr>
+<td>scroll</td>
+<td>mixed</td>
+<td>Set an element selector to scroll to or a function to apply manual scrolling.</td>
+</tr>
+<tr>
+<td>infiniteScroll</td>
+<td>bool</td>
+<td>Enables infinite scroll.</td>
+</tr>
+<tr>
+<td>scrollOffset</td>
+<td>number</td>
+<td>Set an offset when to trigger infinite scroll.</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="css-classes"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#css-classes"><i class="fa fa-link"></i></a>CSS Classes</h4>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ascClass</td>
+<td>string</td>
+<td>Set a css class for ascending order.</td>
+</tr>
+<tr>
+<td>descClass</td>
+<td>string</td>
+<td>Set a css class for descending order.</td>
+</tr>
+<tr>
+<td>appliedFilter</td>
+<td>string</td>
+<td>The class that should be added to applied filter elements.</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="sorting-options"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#sorting-options"><i class="fa fa-link"></i></a>Sorting options</h4>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>column</td>
+<td>string</td>
+<td>Set a default sort column.</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>string</td>
+<td>Set a default sort direction.</td>
+</tr>
+<tr>
+<td>multicolumn</td>
+<td>string</td>
+<td>Indicates whether multicolumn filtering should be supported.</td>
+</tr>
+<tr>
+<td>delimiter</td>
+<td>string</td>
+<td>Set a multi-column sort delimiter for url. <code>,</code> by default</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="delimiter-options"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#delimiter-options"><i class="fa fa-link"></i></a>Delimiter options</h4>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>query</td>
+<td>string</td>
+<td>Set a query delimiter. ';' is the default.</td>
+</tr>
+<tr>
+<td>expression</td>
+<td>string</td>
+<td>Set an expression delimiter. ':' is the default.</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="search-options"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#search-options"><i class="fa fa-link"></i></a>Search options</h4>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>live</td>
+<td>bool</td>
+<td>Live search.</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>number</td>
+<td>Timeout before applying live search on key press.</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="url-options"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#url-options"><i class="fa fa-link"></i></a>Url options</h4>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hash</td>
+<td>bool</td>
+<td>Enables handling hash urls.</td>
+</tr>
+<tr>
+<td>semantic</td>
+<td>bool</td>
+<td>Enables using semantic user-friendly urls instead of '#'.</td>
+</tr>
+<tr>
+<td>base</td>
+<td>string</td>
+<td>Distinguisher for base url and data-grid params.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Default url looks like this:</p>
+
+<p><code>http://demo.cartalyst.com/data-grid/standard#population/throttle:20</code></p>
+
+<p>Enabling semantic url will give you this:</p>
+
+<p><code>http://demo.cartalyst.com/data-grid/standard/population/throttle:20</code></p>
+
+<p>where <code>/data-grid/standard</code> should be set as your url options <code>base</code>.</p>
+
+<blockquote>
+<p><strong>Note:</strong> Make sure to set up your back end router properly, as the data-grid doesn't handle it.<br>
+E.g.: <code>Route::get('semantic{hash}', 'MyController@grid')-&gt;where('hash', '(.*)?');</code></p>
+</blockquote>
+
+<h4 id="loader-options"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#loader-options"><i class="fa fa-link"></i></a>Loader options</h4>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>element</td>
+<td>string</td>
+<td>Your loader object selector. ie. <code>.loader</code></td>
+</tr>
+<tr>
+<td>showEffect</td>
+<td>string</td>
+<td>Sets the loader show effect. ie. <code>fadeIn</code></td>
+</tr>
+<tr>
+<td>hideEffect</td>
+<td>string</td>
+<td>Sets the loader hide effect. ie. <code>fadeOut</code></td>
+</tr>
+<tr>
+<td>duration</td>
+<td>number</td>
+<td>Effect duration.</td>
+</tr>
+</tbody>
+</table>
+
+<div name="events" data-unique="events"></div><h3>Events</h3>
+
+<p>Below is a list with all of the events that are fired throughout the lifecycle.</p>
+
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>applying</td>
+<td>Fired before a filter is applied.</td>
+</tr>
+<tr>
+<td>applied</td>
+<td>Fired after a filter has been applied.</td>
+</tr>
+<tr>
+<td>removing</td>
+<td>Fired before a filter is removed.</td>
+</tr>
+<tr>
+<td>removed</td>
+<td>Fired after a filter has been removed.</td>
+</tr>
+<tr>
+<td>removing_group</td>
+<td>Fired before a filter group is removed.</td>
+</tr>
+<tr>
+<td>removed_group</td>
+<td>Fired after a filter group has been removed.</td>
+</tr>
+<tr>
+<td>sorting</td>
+<td>Fired before sorting is applied.</td>
+</tr>
+<tr>
+<td>sorted</td>
+<td>Fired after sorting has been applied.</td>
+</tr>
+<tr>
+<td>fetching</td>
+<td>Fired before triggering the ajax fetch request.</td>
+</tr>
+<tr>
+<td>fetched</td>
+<td>Fired after a successful ajax fetch request.</td>
+</tr>
+<tr>
+<td>switching</td>
+<td>Fired before the page changes.</td>
+</tr>
+<tr>
+<td>switched</td>
+<td>Fired after the page has changed.</td>
+</tr>
+<tr>
+<td>reset</td>
+<td>Fired after the grid is reset.</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="example"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#example"><i class="fa fa-link"></i></a>Example</h4>
+
+<p>Each event brings the context on what exactly has happened.</p>
+
+<h5>Binding chained callbacks</h5>
+
+<pre class="prettyprint lang-js"><code><span class="kwd">var</span><span class="pln"> grid </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">.</span><span class="pln">datagrid</span><span class="pun">(‘</span><span class="pln">standard</span><span class="pun">’,</span><span class="pln"> options</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">.</span><span class="pln">on</span><span class="pun">(‘</span><span class="pln">dg</span><span class="pun">:</span><span class="pln">applying</span><span class="pun">’,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">filter</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">,</span><span class="pln"> filter</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">});</span></code></pre>
+
+<p>or</p>
+
+<pre class="prettyprint lang-js"><code><span class="kwd">var</span><span class="pln"> grid </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">.</span><span class="pln">datagrid</span><span class="pun">(‘</span><span class="pln">standard</span><span class="pun">’,</span><span class="pln"> options</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">.</span><span class="pln">on</span><span class="pun">({</span><span class="pln">
+        </span><span class="pun">‘</span><span class="pln">dg</span><span class="pun">:</span><span class="pln">applying</span><span class="pun">’:</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">filter</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">,</span><span class="pln"> filter</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">‘</span><span class="pln">dg</span><span class="pun">:</span><span class="pln">applied</span><span class="pun">’:</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">filter</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">,</span><span class="pln"> filter</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">});</span></code></pre>
+
+<h6 id="event-callbacks-in-options"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#event-callbacks-in-options"><i class="fa fa-lightbulb-o"></i></a>Event callbacks in options</h6>
+
+<pre class="prettyprint lang-js"><code><span class="kwd">var</span><span class="pln"> grid </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">.</span><span class="pln">datagrid</span><span class="pun">(</span><span class="str">'standard'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    events</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="str">'dg:applying'</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">filter</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">,</span><span class="pln"> filter</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">});</span></code></pre>
+
+<h6 id="callback-arguments"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#callback-arguments"><i class="fa fa-lightbulb-o"></i></a>Callback arguments</h6>
+
+<ul>
+<li><code>this</code> - is a dg instance</li>
+<li><code>filter</code> is js object with all information regarding filter:</li>
+</ul>
+
+<pre class="prettyprint"><code><span class="pun">{</span><span class="pln">
+    name</span><span class="pun">:</span><span class="pln"> </span><span class="pun">“</span><span class="pln">country</span><span class="pun">:</span><span class="pln">canada</span><span class="pun">”,</span><span class="pln">
+    type</span><span class="pun">:</span><span class="pln"> </span><span class="pun">“</span><span class="pln">term</span><span class="pun">”</span><span class="pln">
+    label</span><span class="pun">:</span><span class="pln"> </span><span class="pun">“</span><span class="typ">Canada</span><span class="pun">”,</span><span class="pln">
+    </span><span class="kwd">default</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+    query</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[{</span><span class="pln">column</span><span class="pun">:</span><span class="pln"> </span><span class="pun">“</span><span class="pln">country</span><span class="pun">”,</span><span class="pln"> value</span><span class="pun">:</span><span class="pln"> </span><span class="pun">“</span><span class="typ">Canada</span><span class="pun">”}]</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<div name="extending" data-unique="extending"></div><h3>Extending</h3>
+
+<p>This plugin was built with extensibility in mind,</p>
+
+<p>You can override or extend any method using the following syntax.</p>
+
+<pre class="prettyprint lang-js"><code><span class="pln">$</span><span class="pun">.</span><span class="pln">datagrid</span><span class="pun">.</span><span class="pln">prototype</span><span class="pun">.{</span><span class="pln">method</span><span class="pun">}</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">({</span><span class="pln">params</span><span class="pun">})</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="com">// Your logic</span><span class="pln">
+
+</span><span class="pun">};</span></code></pre>
+
+<h4 id="hooking-into-an-existing-method"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#hooking-into-an-existing-method"><i class="fa fa-link"></i></a>Hooking into an existing method</h4>
+
+<p>You can hook into existing methods to apply custom logic before the method is invoked.</p>
+
+<pre class="prettyprint lang-js"><code><span class="kwd">var</span><span class="pln"> original_method </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">.</span><span class="pln">datagrid</span><span class="pun">.</span><span class="pln">prototype</span><span class="pun">.</span><span class="pln">getThreshold</span><span class="pun">;</span><span class="pln">
+
+$</span><span class="pun">.</span><span class="pln">datagrid</span><span class="pun">.</span><span class="pln">prototype</span><span class="pun">.</span><span class="pln">getThreshold </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="com">// Your custom logic</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> original_method</span><span class="pun">.</span><span class="pln">call</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">);</span><span class="pln">
+
+</span><span class="pun">};</span></code></pre>
+
+<h4 id="overriding-an-existing-method"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#overriding-an-existing-method"><i class="fa fa-link"></i></a>Overriding an existing method</h4>
+
+<p>You can override existing methods.</p>
+
+<pre class="prettyprint lang-js"><code><span class="pln">$</span><span class="pun">.</span><span class="pln">datagrid</span><span class="pun">.</span><span class="pln">prototype</span><span class="pun">.</span><span class="pln">getThreshold </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// Your custom logic</span><span class="pln">
+</span><span class="pun">};</span></code></pre>
+
+<h4 id="extending-data-grid"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#extending-data-grid"><i class="fa fa-link"></i></a>Extending data grid</h4>
+
+<p>You can extend data grid and add new methods that are then callable on data grid.</p>
+
+<pre class="prettyprint lang-js"><code><span class="pln">$</span><span class="pun">.</span><span class="pln">datagrid</span><span class="pun">.</span><span class="pln">prototype</span><span class="pun">.</span><span class="pln">yourNewMethod </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// Your custom logic</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">pagination</span><span class="pun">.</span><span class="pln">page_index </span><span class="pun">-</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">};</span></code></pre><div name="integration" data-unique="integration"></div><h2>Integration</h2>
+
+<p>Data-grid is framework agnostic, which means its core is clean, native php.<br>
+All framework specific features are separated to its own implementation packages, so integrating it with your framework of choice is incredibly easy.</p><div name="laravel-6" data-unique="laravel-6"></div><h3>Laravel 6</h3>
+
+<p>The Data Grid package has optional support for Laravel 6 and it comes bundled with a Service Provider and a Facade for easy integration.</p>
+
+<p>To install Laravel bridge package, add the following requirements to your composer.json:</p>
+
+<pre class="prettyprint"><code><span class="str">"cartalyst/data-grid-laravel"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"^1.0"</span></code></pre>
+
+<p>You don't have to add <code>cartalyst/data-grid</code> requirement, the bridge will ensure all the requirements for you.</p>
+
+<p>Run composer update and after installing the package, open your Laravel config file located at <code>config/app.php</code> and add the following lines.</p>
+
+<p>In the <code>$providers</code> array add the following service provider for this package.</p>
+
+<pre class="prettyprint"><code><span class="typ">Cartalyst</span><span class="pln">\DataGrid\Laravel\DataGridServiceProvider</span><span class="pun">::</span><span class="kwd">class</span><span class="pun">,</span></code></pre>
+
+<p>In the <code>$aliases</code> array add the following facade for this package.</p>
+
+<pre class="prettyprint"><code><span class="str">'DataGrid'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="typ">Cartalyst</span><span class="pln">\DataGrid\Laravel\Facades\DataGrid</span><span class="pun">::</span><span class="kwd">class</span><span class="pun">,</span></code></pre>
+
+<h4 id="resources"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#resources"><i class="fa fa-link"></i></a>Resources</h4>
+
+<p><strong>Configuration</strong></p>
+
+<p>To publish the configuration file run the following on your terminal:</p>
+
+<pre class="prettyprint"><code><span class="pln">php artisan vendor</span><span class="pun">:</span><span class="pln">publish </span><span class="pun">--</span><span class="pln">tag</span><span class="pun">=</span><span class="str">"cartalyst:data-grid.config"</span></code></pre>
+
+<p>This will publish the config file to <code>config/cartalyst/data-grid/config.php</code> where you can modify the package configuration.</p>
+
+<p><strong>Assets</strong></p>
+
+<p>To publish the assets run the following on your terminal:</p>
+
+<pre class="prettyprint"><code><span class="pln">php artisan vendor</span><span class="pun">:</span><span class="pln">publish </span><span class="pun">--</span><span class="pln">tag</span><span class="pun">=</span><span class="str">"cartalyst:data-grid.assets"</span></code></pre>
+
+<p>This will publish the assets to the following path <code>public/assets/vendor/cartalyst/data-grid/*</code>.</p>
+
+<h4 id="database-handler-2"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#database-handler-2"><i class="fa fa-link"></i></a>Database Handler</h4>
+
+<p>The bridge package comes with a DatabaseHandler, allowing you to work with your Eloquent models or any <code>illuminate/database</code> components.</p>
+
+<h5>Usage</h5>
+
+<pre class="prettyprint lang-php"><code><span class="kwd">use</span><span class="pln"> </span><span class="typ">Cartalyst</span><span class="pln">\DataGrid\Laravel\DataHandlers\DatabaseHandler</span><span class="pun">;</span><span class="pln">
+
+$handler </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">DatabaseHandler</span><span class="pun">(</span><span class="pln">$data</span><span class="pun">,</span><span class="pln"> $settings</span><span class="pun">);</span><span class="pln">
+$dataGrid </span><span class="pun">=</span><span class="pln"> </span><span class="typ">DataGrid</span><span class="pun">::</span><span class="pln">make</span><span class="pun">(</span><span class="pln">$handler</span><span class="pun">);</span></code></pre>
+
+<h5>Settings</h5>
+
+<p>On top of available options, <code>data-grid-laravel</code> additionally supports the following options:</p>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filters</td>
+<td>array</td>
+<td></td>
+<td>Array of callables to handle custom filters.</td>
+</tr>
+<tr>
+<td>sorts</td>
+<td>array</td>
+<td></td>
+<td>Array of callables to handle custom sorts.</td>
+</tr>
+</tbody>
+</table>
+
+<h6 id="custom-filters"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#custom-filters"><i class="fa fa-lightbulb-o"></i></a>Custom filters</h6>
+
+<p>Custom filters allow you to adjust the default behavior for column filters.</p>
+
+<pre class="prettyprint lang-php"><code><span class="kwd">use</span><span class="pln"> </span><span class="typ">Cartalyst</span><span class="pln">\DataGrid\Laravel\DataHandlers\DatabaseHandler</span><span class="pun">;</span><span class="pln">
+
+$settings </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+    </span><span class="str">'columns'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        </span><span class="str">'title'</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">'age'</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">],</span><span class="pln">
+    </span><span class="str">'filters'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        </span><span class="str">'active'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">$query</span><span class="pun">,</span><span class="pln"> $operator</span><span class="pun">,</span><span class="pln"> $value</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            $value </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">bool</span><span class="pun">)</span><span class="pln">$value</span><span class="pun">;</span><span class="pln">
+
+            </span><span class="com">// Because there could be 'pending', 'expired' or whatever</span><span class="pln">
+            $operator </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">$value</span><span class="pun">)</span><span class="pln"> </span><span class="pun">?</span><span class="pln"> </span><span class="str">'='</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">'!='</span><span class="pun">;</span><span class="pln">
+
+            $query</span><span class="pun">-&gt;</span><span class="kwd">where</span><span class="pun">(</span><span class="str">'is_active'</span><span class="pun">,</span><span class="pln"> $value</span><span class="pun">);</span><span class="pln">
+            $query</span><span class="pun">-&gt;</span><span class="kwd">where</span><span class="pun">(</span><span class="str">'status'</span><span class="pun">,</span><span class="pln"> $operator</span><span class="pun">,</span><span class="pln"> </span><span class="str">'active'</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">]</span><span class="pln">
+</span><span class="pun">];</span><span class="pln">
+
+$handler </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">DatabaseHandler</span><span class="pun">(</span><span class="pln">$data</span><span class="pun">,</span><span class="pln"> $settings</span><span class="pun">);</span><span class="pln">
+$dataGrid </span><span class="pun">=</span><span class="pln"> </span><span class="typ">DataGrid</span><span class="pun">::</span><span class="pln">make</span><span class="pun">(</span><span class="pln">$handler</span><span class="pun">);</span></code></pre>
+
+<h6 id="custom-sorts"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#custom-sorts"><i class="fa fa-lightbulb-o"></i></a>Custom sorts</h6>
+
+<p>Custom sorts allow you to adjust the default behavior for sorting.</p>
+
+<pre class="prettyprint lang-php"><code><span class="kwd">use</span><span class="pln"> </span><span class="typ">Cartalyst</span><span class="pln">\DataGrid\Laravel\DataHandlers\DatabaseHandler</span><span class="pun">;</span><span class="pln">
+
+$settings </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+    </span><span class="str">'columns'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        </span><span class="str">'title'</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">'age'</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">],</span><span class="pln">
+    </span><span class="str">'sorts'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        </span><span class="str">'popular'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="typ">Builder</span><span class="pln"> $query</span><span class="pun">,</span><span class="pln"> $direction</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            $query</span><span class="pun">-&gt;</span><span class="pln">orderBy</span><span class="pun">(</span><span class="str">'views'</span><span class="pun">,</span><span class="pln"> $direction</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">]</span><span class="pln">
+</span><span class="pun">];</span><span class="pln">
+
+$handler </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">DatabaseHandler</span><span class="pun">(</span><span class="pln">$data</span><span class="pun">,</span><span class="pln"> $settings</span><span class="pun">);</span><span class="pln">
+$dataGrid </span><span class="pun">=</span><span class="pln"> </span><span class="typ">DataGrid</span><span class="pun">::</span><span class="pln">make</span><span class="pun">(</span><span class="pln">$handler</span><span class="pun">);</span></code></pre><div name="export" data-unique="export"></div><h3>Export</h3>
+
+<p>DataGrid Export is a package that provides support for exporting your result sets to any other data structure.</p>
+
+<pre class="prettyprint"><code><span class="str">"cartalyst/data-grid-export"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"^1.0"</span></code></pre>
+
+<p>You don't have to add <code>cartalyst/data-grid</code> requirement, the package will ensure all the requirements for you.</p>
+
+<h4 id="export-provider"><a class="anchor-link" href="https://cartalyst.com/manual/data-grid/5.x#export-provider"><i class="fa fa-link"></i></a>Export Provider</h4>
+
+<p><code>ExportProvider</code> simply extends the default <code>RequestProvider</code> and adds behavior for <code>download</code> requests.</p>
+
+<h5>Usage</h5>
+
+<pre class="prettyprint lang-php"><code><span class="kwd">use</span><span class="pln"> </span><span class="typ">Cartalyst</span><span class="pln">\DataGrid\Export\Providers\ExportProvider</span><span class="pun">;</span><span class="pln">
+
+$handler </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">DatabaseHandler</span><span class="pun">(</span><span class="pln">$data</span><span class="pun">,</span><span class="pln"> $settings</span><span class="pun">);</span><span class="pln">
+$provider </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">ExportProvider</span><span class="pun">();</span><span class="pln">
+
+$dataGrid </span><span class="pun">=</span><span class="pln"> </span><span class="typ">DataGrid</span><span class="pun">::</span><span class="pln">make</span><span class="pun">(</span><span class="pln">$handler</span><span class="pun">,</span><span class="pln"> $provider</span><span class="pun">);</span></code></pre>
+
+<h5>Settings</h5>
+
+<p>Data-grid Export supports the following settings, which you can pass to the data handler:</p>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pdf_view</td>
+<td>string</td>
+<td>cartalyst/data-grid::pdf</td>
+<td>Pdf view that renders the results for pdf download.</td>
+</tr>
+<tr>
+<td>pdf_filename</td>
+<td>string</td>
+<td>data-grid</td>
+<td>Pdf filename for pdf download.</td>
+</tr>
+<tr>
+<td>json_options</td>
+<td>int</td>
+<td>null</td>
+<td>Json options ex. <code>JSON_PRETTY_PRINT</code> for json download.</td>
+</tr>
+<tr>
+<td>json_filename</td>
+<td>string</td>
+<td>data-grid</td>
+<td>Json filename for json download.</td>
+</tr>
+<tr>
+<td>csv_delimiter</td>
+<td>string</td>
+<td>','</td>
+<td>Csv delimiter for csv download</td>
+</tr>
+<tr>
+<td>csv_filename</td>
+<td>string</td>
+<td>data-grid</td>
+<td>Csv filename for csv download.</td>
+</tr>
+<tr>
+<td>csv_parser</td>
+<td>function</td>
+<td>null</td>
+<td>Csv parser, define your own parser for csv download.</td>
+</tr>
+<tr>
+<td>max_results</td>
+<td>int</td>
+<td>null</td>
+<td>Maximum results for downloads.</td>
+</tr>
+</tbody>
+</table>
+
+<h5>Export Driver</h5>
+
+<p>ExportProvider supports the following drivers by default:</p>
+
+<ul>
+<li><code>Cartalyst\DataGrid\Export\ExportDrivers\CsvDriver</code></li>
+<li><code>Cartalyst\DataGrid\Export\ExportDrivers\JsonDriver</code></li>
+<li><code>Cartalyst\DataGrid\Export\ExportDrivers\PdfDriver</code></li>
+</ul>
+
+<p>You can customize the existing export drivers or create your own.</p>
+
+<pre class="prettyprint lang-php"><code><span class="kwd">class</span><span class="pln"> </span><span class="typ">MyPdfDriver</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">PdfDriver</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// E.g. customize your driver to use mPDF instead of dompdf</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>Then use helper method to add your own driver. It will replace any existing driver references for the download type:</p>
+
+<pre class="prettyprint lang-php"><code><span class="typ">ExportProvider</span><span class="pun">::</span><span class="pln">addDriver</span><span class="pun">(</span><span class="str">'pdf'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">MyPdfDriver</span><span class="pun">());</span></code></pre>
+			</div>
+
+		</div>
+
+	</article>
+
+</section>
+
+					<footer>
+						<div class="divider divider--cartalyst-badge"></div>
+						<p class="pitch pitch--small tip" data-tip="Except right now">You wont find fancy lifestyle graphics and marketing bravado here. Just cold... hard... code...</p>
+					</footer>
+
+				</div>
+
+			</div>
+
+			<aside class="page__right page__right--docs">
+
+				<nav class="navigate navigate--login">
+	<ul>
+		<ul class="">
+	<li class="">
+	<a href="http://cartalyst.com/login" class="">
+		<span class=" "></span>
+		Signin
+	</a>
+
+	</li>
+</ul>
+	</ul>
+</nav>
+
+<nav class="navigate navigate--site"><ul class="">
+	<li class="">
+	<a href="http://cartalyst.com/" class="">
+		<span class=" "></span>
+		Arsenal
+	</a>
+
+	</li>
+<li class="">
+	<a href="http://cartalyst.com/pricing" class="">
+		<span class=" "></span>
+		Pricing
+	</a>
+
+	</li>
+<li class="">
+	<a href="http://cartalyst.com/quickstart" class="">
+		<span class=" "></span>
+		Quickstart
+	</a>
+
+	</li>
+<li class="">
+	<a href="https://medium.com/@Cartalyst" class="">
+		<span class=" "></span>
+		Blog
+	</a>
+
+	</li>
+</ul>
+</nav>
+
+<nav class="navigate navigate--support"><ul class="">
+	<li class="">
+	<a href="http://cartalyst.com/support" class="">
+		<span class=" "></span>
+		Help &amp; Support
+	</a>
+
+	</li>
+<li class="">
+	<a href="http://cartalyst.com/terms" class="">
+		<span class=" "></span>
+		Terms &amp; Conditions
+	</a>
+
+	</li>
+<li class="">
+	<a href="http://cartalyst.com/license" class="">
+		<span class=" "></span>
+		License
+	</a>
+
+	</li>
+<li class="">
+	<a href="http://cartalyst.com/about" class="">
+		<span class=" "></span>
+		About
+	</a>
+
+	</li>
+<li class="">
+	<a href="http://cartalyst.com/newsletter" class="">
+		<span class=" "></span>
+		Newsletter
+	</a>
+
+	</li>
+</ul>
+</nav>
+
+<div class="divider divider--sidebar"></div>
+
+<nav class="navigate navigate--social">
+	<ul>
+		<li><a href="https://twitter.com/cartalyst" target="_blank"><i class="fa fa-twitter"></i></a></li>
+		<li><a href="https://github.com/cartalyst" target="_blank"><i class="fa fa-github"></i></a></li>
+		<li><a href="https://plus.google.com/117660824651482421191" rel="publisher" target="_blank"><i class="fa fa-google-plus-square"></i></a></li>
+		<li><a href="https://cartalyst.com/manual/data-grid/5.x" class="copyright"><strong>©</strong></a></li>
+	</ul>
+</nav>
+<a href="https://plus.google.com/117660824651482421191" rel="publisher">Google+</a>
+
+			</aside></div>
+
+		
+	</div>
+
+
+<footer class="notifications" style="display: none;">
+	</footer>
+
+<div class="loader" data-grid="main">
+	<div>
+		<span>Code Well, Rock On!</span>
+	</div>
+</div>
+
+<div class="card-processing">
+	<div>
+		<span>Processing Payment...</span>
+	</div>
+</div>
+
+
+<script src="./Data-grid Manual __ Cartalyst_files/frontend.v5.scripts.cc5e2c3a4a3ba6a1cddd0d77c44bdd1c_1485824238.js"></script>
+
+
+<script>
+	$(function()
+	{
+		$('.navigate--toc').perfectScrollbar({
+			includePadding: true
+		});
+
+		var toc = $('#toc').tocify({
+			selectors: 'h2, h3',
+			extendPage: false,
+			showAndHide: false,
+			hashGenerator: 'pretty'
+		}).data('toc-tocify');
+
+		// Force external links to open in a new tab
+		$('.documentation a[href^="http"]').attr('target', '_blank');
+
+		// Find all H4 & H6 tags and give an id
+		[ 'H4', 'H6' ].forEach(function(tag)
+		{
+			var tags = document.getElementsByTagName(tag), l = tags.length, i, newId, n;
+
+			var regexDelimiter = '-'.replace(new RegExp(/[[\/\\^$*+?.()|{}\]]/g), "\\$&");
+			var trim = new RegExp("^" + regexDelimiter + "*(.*?)" + regexDelimiter + "*$");
+
+			for (i = 0; i < l; i++)
+			{
+				newId = tags[i].firstChild.nodeValue.toLowerCase().replace(/[^a-z0-9-]/g,'-').replace(/--+/g,'-');
+
+				if (document.getElementById(newId))
+				{
+					n = 1;
+
+					do { n++; }
+
+					while(document.getElementById(newId + '-' + n));
+
+					newId += '-' + n;
+				}
+
+				tags[i].id = newId.replace(trim, "$1");
+			}
+		});
+
+		// Add anchor links on the H4 & H6 tags
+		$('.documentation h4').each(function()
+		{
+			$(this).prepend('<a class="anchor-link" href="#'+ this.id +'"><i class="fa fa-link"></i></a>');
+		});
+		$('.documentation h6').each(function()
+		{
+			$(this).prepend('<a class="anchor-link" href="#'+ this.id +'"><i class="fa fa-lightbulb-o"></i></a>');
+		});
+
+		$('.documentation a').on('click', function(e)
+		{
+			// Ignore external links
+			if ($(this).attr('href').charAt(0) !== '#') return;
+
+			var self   = this,
+			duration   = 'medium',
+			currentDiv = $('div[data-unique="' + $(this).attr('href').slice(1) + '"]'),
+			scrollTo   = currentDiv ? currentDiv.offset().top : 0;
+
+			if ( ! currentDiv.length) return;
+
+			$('html, body').promise().done(function()
+			{
+				$('html, body').animate({
+					'scrollTop': currentDiv.offset().top + 'px'
+				},
+				{
+					'duration': duration
+				});
+			});
+		});
+
+		$('.documentation pre').addClass('prettyprint');
+
+		prettyPrint();
+	});
+
+	$(window).load(function()
+	{
+		var hash = window.location.hash.slice(1);
+
+		setTimeout(function()
+		{
+			if (hash.length > 0)
+			{
+				var currentDiv = $('div[data-unique="' + hash + '"]');
+
+				if (currentDiv.offset())
+				{
+					$(window).scrollTop(currentDiv.offset().top);
+				}
+			}
+		}, 0);
+	});
+</script>
+
+<script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-26550564-1']);
+	_gaq.push(['_setDomainName', 'cartalyst.com']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+</script>
+
+
+</body></html>

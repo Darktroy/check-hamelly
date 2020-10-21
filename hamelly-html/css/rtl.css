@@ -1,0 +1,98 @@
+
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/DroidKufi-Regular.eot');
+  src: url('../fonts/DroidKufi-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/DroidKufi-Regular.woff2') format('woff2'),
+       url('../fonts/DroidKufi-Regular.woff') format('woff'),
+       url('../fonts/DroidKufi-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/DroidKufi-Bold.eot');
+  src: url('../fonts/DroidKufi-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/DroidKufi-Bold.woff2') format('woff2'),
+       url('../fonts/DroidKufi-Bold.woff') format('woff'),
+       url('../fonts/DroidKufi-Bold.ttf') format('truetype');
+}
+
+*{
+    font-family:  'Droid Arabic Kufi', sans-serif
+}
+
+.pl-0{padding-right: 0;padding-left: 15px}
+.form-bg{float: right;}
+.origin .form-control {
+    background: url(../img/origin.png) no-repeat right !important;
+    border: 0;border-radius: 0;border-left: 1px solid #000;border-right: 0
+}
+.destination .form-control {
+    background: url(../img/destination.png) no-repeat right !important;
+    border: 0
+}
+.form-btn{float: right;}
+.download a{margin-right: auto;margin-left: 30px}
+.details-text{margin-right: 15px;margin-left: auto;}
+.footer .input-group .form-control {
+    padding-right: 15px;padding-left: 37px
+}
+.input-group-btn .the-btn3 {
+    margin-right: -30px !important;margin-left: auto;
+}
+.footer span{float: left;}
+.footer .social li a{margin-left: 25px;margin-right: auto;}
+.details-text3{text-align: right;}
+.about-section .contact-details{padding: 70px 90px 0 0}
+.form-bg2 .form-control2{padding-right: 10px;padding-left: auto;}
+.how .details > div{float: right;}
+.faq .panel-heading a::after {
+    font-family: 'Glyphicons Halflings';
+    content: "\e114";
+    float: left;
+    color: #1d2530;
+}
+.fa-long-arrow-right::before {
+    content: "\f177";
+}
+.how{
+  background: url(../img/faq-bg-rtl.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+.how-work .text3{margin-left: auto;margin-right: 0}
+/* start responsive */
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) { 
+  .pl-0{padding-right: 15px}
+  .num{margin-right: 15px;margin-left: auto;}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+  .about-section .contact-details {
+    padding: 20px 20px 0 0;
+  }
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+}
+
+@media only screen and (max-width : 250px){
+}
+/* end responsive */
